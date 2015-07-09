@@ -1,0 +1,67 @@
+/**
+ * DataStorage.hpp
+ *
+ *  Created on: 11 janv. 2014
+ *  Author: Valentin LAURENT & Valentin ELVASSORE
+ */
+
+#ifndef DATASTORAGE_HPP_
+#define DATASTORAGE_HPP_
+
+#include <cstddef>
+#include "../Entity/Agent.hpp"
+#include "../Entity/Human.hpp"
+#include "../Entity/Predator.hpp"
+#include "../Entity/Alien.hpp"
+#include "../Logic/GameController.hpp"
+#include <vector>
+#include <iterator>
+
+
+class GameController;
+
+/**
+ * The data storage manage all ressources used by the game controller.
+ */
+class DataStorage {
+    
+private:
+	int         _width;             /**< the width of the matrix */
+	int         _height;            /**< the height of the matrix */
+	Agent ***   _matrix;            /**< the matrix of the game */
+	std::vector<Agent *> _agents;   /**< the vector of Agents */
+
+	void initMatrix();
+
+public:
+    //Constructor
+	DataStorage(int = 10, int = 20);
+    
+    //Destructor
+	~DataStorage();
+    
+    //Getters
+	int getHeight() const;
+    int getWidth() const;
+    Agent*** getMatrix() const;
+    const std::vector<Agent*> getAgents() const;
+    Agent* getAgentAt(int) const;
+    
+    //Setters
+	void setHeight(int height);
+	void setWidth(int width);
+	void setAgents(const std::vector<Agent*> agents);
+    
+    //Methods
+    void destroyAgent(Agent *);
+    bool moveAgent(Agent *, int, int);
+    
+    void giveBirth(Agent *, int , int);
+    Agent*** copyOfMatrix();
+    void ageingPopulation();
+    
+    //Constants
+	const static double PROPORTIONS_CUMULEES[4];
+};
+
+#endif /* DATASTORAGE_HPP_ */

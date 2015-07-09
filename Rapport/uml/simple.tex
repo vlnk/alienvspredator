@@ -1,0 +1,52 @@
+\begin{figure}[h!]
+	\centering
+  	\begin{tikzpicture}
+	\begin{umlpackage}[fill=White]{Presentation}
+		\umlclass[y=-7,x=3,fill=White]{Console}{}{}
+	\end{umlpackage}
+
+	\begin{umlpackage}[fill=White]{Logic}
+		\umlclass[fill=White, y=-2]{GameController}{}{}
+		\umlclass[x=3, y=-4, fill=White]{MersenneTwister}{}{}
+	\end{umlpackage}
+
+	\begin{umlpackage}[fill=White]{Data}
+		\umlclass[y=4, fill=White]{DataStorage}{}{}
+	\end{umlpackage}
+
+	\begin{umlpackage}[fill=White]{Entity}
+		\umlclass[x=8, y=5, fill=White]{Agent}{}{}
+		\umlclass[x=5.5, y=3, fill=White]{Alien}{}{}
+		\umlclass[x=8, y=3, fill=White]{Human}{}{}
+		\umlclass[x=10.5, y=3, fill=White]{Predator}{}{}
+	\end{umlpackage}
+
+	\begin{umlpackage}[fill=White]{Behaviour}
+		\umlinterface[x=10, y=-2, fill=White]{IBehaviour}{}{}
+		\umlclass[x=7.2, y=-5, fill=White]{Aggressive}{}{}
+		\umlclass[x=10, y=-5, fill=White]{Defensive}{}{}
+		\umlclass[x=12.7, y=-5, fill=White]{Courtship}{}{}
+		\umlclass[x=13, y=-2, fill=White]{Movement}{}{}
+	\end{umlpackage}
+
+	\umlcompo[mult1=1, pos1=0.1, mult2=1, pos2=0.9, angle1=80, angle2=10, loopsize=2cm]{GameController}{GameController}
+	\umluniassoc[geometry=--,arg=create(), pos=0.5]{DataStorage}{Entity}
+	\umluniassoc[geometry=|-|, arg=changeData(), pos=1.5, anchor1=120, anchor2=-60]{Behaviour}{Data}
+
+	\umlcompo[mult1=1, pos1=0.2, mult2=1, pos2=1.9, geometry=|-]{MersenneTwister}{GameController}
+
+	\umlinherit[geometry=|-|]{Alien}{Agent}
+	\umlinherit[]{Human}{Agent}
+	\umlinherit[geometry=|-|]{Predator}{Agent}
+
+	\umlaggreg[mult1=1, pos1=0.2, mult2=1, pos2=1.9, geometry=-|]{Console}{GameController}
+	\umlaggreg[mult1=1, pos1=0.1, mult2=1, pos2=0.9,]{DataStorage}{GameController}
+	\umlaggreg[mult1=1, pos1=0.1, mult2=1, pos2=0.9]{IBehaviour}{Movement}
+
+	\umlinherit[geometry=|-|]{Aggressive}{IBehaviour}
+	\umlinherit[]{Defensive}{IBehaviour}
+	\umlinherit[geometry=|-|]{Courtship}{IBehaviour}
+
+	\end{tikzpicture}
+	\caption{Diagramme de classes de l'analyse de la \textit{Black Box}}
+\end{figure}

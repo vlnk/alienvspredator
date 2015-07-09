@@ -1,0 +1,6 @@
+\begin{lstlisting}[style=c++]
+CourtshipBehaviour * lover = new CourtshipBehaviour();
+currentAgent->changeBehaviour(lover);
+lover->loveSig.connect(boost::bind(&DataStorage::giveBirth,&_data,_1,_2,_3));
+lover->getMovement().addMoveSignal(boost::bind(&DataStorage::moveAgent,&_data,_1,_2,_3));
+\end{lstlisting}

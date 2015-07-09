@@ -1,0 +1,26 @@
+/**
+ * Define the courtship behaviour of agents, when an agent whant to make love.
+ * @file CourtshipBehaviour.h
+ * @author Laurent Valentin
+ * @date 13/03/2014
+ */
+
+#ifndef __COURTSHIPBEHAVIOUR_HPP__
+#define __COURTSHIPBEHAVIOUR_HPP__
+
+#include <iostream>
+#include "IBehaviour.h"
+
+class CourtshipBehaviour : public IBehaviour
+{
+public:
+    //Constructor
+    CourtshipBehaviour(){};
+    
+    //Destructor
+    ~CourtshipBehaviour(){};
+    
+    bool act(Agent *, Agent ***, DataStorage&);
+};
+
+#endif /*__COURTSHIPBEHAVIOUR_HPP__*/

@@ -1,0 +1,31 @@
+/**
+ * Define the aggressive behaviour of agents, when an agent whant to fight.
+ * @file AggressiveBehaviour.h
+ * @author Laurent Valentin
+ * @date 13/03/2014
+ */
+
+#ifndef __AGGRESSIVEBEHAVIOUR_HPP__
+#define __AGGRESSIVEBEHAVIOUR_HPP__
+
+#include <iostream>
+#include "IBehaviour.h"
+
+class AggressiveBehaviour : public IBehaviour
+{
+private:
+    int _distance;
+    
+public:
+    //Constructor
+    AggressiveBehaviour();
+    
+    //Destructor
+    ~AggressiveBehaviour(){};
+    
+    bool act(Agent *, Agent ***, DataStorage&);
+    bool attack(Agent *, Agent ***, DataStorage&, int = 0);
+    move_t findPrey(Agent *, Agent ***, int, int);
+};
+
+#endif /*__AGGRESSIVEBEHAVIOUR_HPP__*/

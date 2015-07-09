@@ -1,0 +1,83 @@
+/**
+ * Make a movement for each Agent
+ * @file Movement.cpp
+ * @author Valentin Laurent
+ * @date 13/03/2014
+ */
+
+#include "Movement.h"
+/**
+ * Move an Agent in a random direction
+ * @param *a an Agent pointer.
+ * @param ***cpy_matrix the copy of the field of game.
+ * @param width The width of the matrix.
+ * @param height The height of the matrix.
+ * @param direction The default direction to take.
+ */
+bool Movement::move(Agent *a, int width, int height, int direction)
+{
+	bool    deplace = false;
+    bool    cannot_move = false;
+    int     try_to_move = 0;
+    
+	do
+	{
+		switch (direction) {
+			case UP:
+				if (a->getCoordinate().x > 0)
+				{
+					deplace = move(a, a->getCoordinate().x - 1, a->getCoordinate().y);
+				}
+				break;
+			case RIGHT:
+				if (a->getCoordinate().y < (height - 1))
+				{
+					deplace = move(a, a->getCoordinate().x, a->getCoordinate().y + 1);
+				}
+				break;
+			case DOWN:
+                if (a->getCoordinate().x < (width - 1))
+				{
+					deplace = move(a, a->getCoordinate().x + 1, a->getCoordinate().y);
+				}
+				break;
+			default:
+                if (a->getCoordinate().y > 0)
+				{
+					deplace = move(a, a->getCoordinate().x, a->getCoordinate().y - 1);
+				}
+				break;
+		}
+        
+        try_to_move++;
+        
+        if (try_to_move > 3) {
+            cannot_move = true;
+        }
+        
+	} while (!deplace && !cannot_move);
+    
+    return deplace;
+}
+
+/**
+ * Move Agent in a precise direction.
+ * @param *a An Agent pointer.
+ * @param x An integer for moving on the x-axis.
+ * @param y An integer for moving on the y-axis.
+ */
+bool Movement::move(Agent * a, int x, int y)
+{
+    return _moveSig(a,x,y);
+}
+
+/**
+ * Connect a slot for movement signal
+ * @param slot A slot relative to a movement in the matrix.
+ */
+void Movement::addMoveSignal(const MoveSignal::slot_type& slot) const
+{
+    _moveSig.connect(slot);
+}
+
+

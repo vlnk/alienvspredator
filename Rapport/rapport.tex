@@ -1,0 +1,172 @@
+%-----------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-----------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt, ]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TYPOGRAPHY
+\usepackage[utf8]{luainputenc}
+%\usepackage[utf8x]{inputenc} % Encodage
+%\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+%\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+%\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LANGAGE
+\usepackage{polyglossia}
+\setmainlanguage{french}
+
+%\makeatletter
+%\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+%\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HYPERREF
+\usepackage{hyperref} % Links managment
+\usepackage{url}
+\hypersetup{
+  colorlinks=true,
+  citecolor=blue,
+  urlcolor=blue,
+  linktoc=all,
+  linkcolor=black,
+  plainpages=false,
+  bookmarksnumbered,
+}
+% For print version, use this instead:
+%\usepackage[pdfusetitle,bookmarksnumbered,plainpages=false]{hyperref}
+%\usepackage{backref}
+%\renewcommand{\backrefpagesname}{Cited on}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+\usepackage[dvipsnames]{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GRAPHICS
+\usepackage{graphicx} % Required for including pictures
+\usepackage{epstopdf}
+\usepackage{wrapfig} % Allows in-line images
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE
+\usepackage{geometry} % Margin configuration
+\geometry{hmargin=2.5cm,vmargin=1.5cm}
+\usepackage{multicol} % Columns managment
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TIKZ
+\usepackage{tikz} %TIKZ package required for draw graphics
+\usetikzlibrary{shapes,arrows}
+\usepackage{pgfplots}
+\usepackage{pgfopts}
+
+\pgfplotsset{
+  compat=newest,
+  xlabel near ticks,
+  ylabel near ticks
+}
+
+\usepackage{booktabs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% UML (tikz)
+\usepackage{tikz-uml}
+\usepackage{ifthen} %UML
+\usepackage{xstring}
+\usepackage{calc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CODING STYLE
+\input{template/listings} % for coding
+\renewcommand{\lstlistlistingname}{Table des codes source}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENT STYLE
+%\usepackage[nottoc, notlof, notlot]{tocbibind}
+\makeatletter
+\renewcommand*\l@section[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\ 
+       \leaders\hbox{$\m@th
+        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+        mu$}\hfil\nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE STYLE
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\Huge\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\Large\@author} % Author name
+\\\Large\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+\title{\textbf{Simulation multi-agents}\\
+{\Large Simulation de \emph{Alien Versus Predator}}} % Subtitle
+
+\author{\textsc{Valentin Laurent - Valentin Elvassore} % Author
+\\{\textit{ISIMA F2 Simulation/Génie logiciel}}} % Institution
+
+\date{15 Mars 2014} % Date
+
+%----------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle % Print the title section
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BODY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\newpage
+
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+\input{content/introduction}
+\cleardoublepage
+
+\section{Contexte du projet}
+\input{content/chapitre1}
+\cleardoublepage
+
+\section{Conception de la solution}
+\input{content/chapitre2}
+\cleardoublepage
+
+\section{Présentation des résultats}
+\input{content/chapitre3}
+\cleardoublepage
+
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+\input{content/conclusion}
+\cleardoublepage
+
+\end{document}

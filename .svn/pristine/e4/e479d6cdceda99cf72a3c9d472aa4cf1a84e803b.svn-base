@@ -1,0 +1,132 @@
+/**
+ * Class Agent descriptor
+ * @file Agent.cpp
+ * @author Valentin Laurent et Valentin Elvassore
+ * @date 21 Janvier 2014
+ */
+
+#include "Agent.hpp"
+#include "../Behaviour/IBehaviour.h"
+#include "../Data/DataStorage.hpp"
+
+/**
+ * Agent constructor
+ * @param x the x-coordonate of the Agent.
+ * @param y the y-coordonate of the Agent.
+ * @param lifespan the lifespan of the Agent.
+ * @param age the age of the Agent.
+ * @param fieldOfVision the field of vision of the Agent.
+ */
+Agent::Agent(int x, int y, int lifespan, int age, int fieldOfVision) :
+    _lifespan(lifespan),
+    _age(age),
+    _fieldOfVision(fieldOfVision)
+{
+	_coordinate = coordinate_t();
+	_coordinate.x = x;
+	_coordinate.y = y;
+}
+
+/**
+ * Agent destructor
+ */
+Agent::~Agent()
+{
+    delete _behaviour;
+}
+
+/**
+ * Agent coordonate setter
+ * @param x the x-coordonate of the Agent.
+ * @param y the y-coordonate of the Agent.
+ */
+void Agent::setCoordinate(int x, int y)
+{
+	_coordinate.x = x;
+	_coordinate.y = y;
+}
+
+/**
+ * Agent toString() method
+ * @return a representative string of Agent object.
+ */
+std::string Agent::toString() const
+{
+	return "Ag";
+}
+
+/**
+ * Agent displayer
+ * @param o a flux to display Agent.
+ * @param a the Agent to display.
+ * @return the flux which display the Agent.
+ */
+std::ostream& operator<<(std::ostream &o, Agent const&a)
+{
+	return o << a.toString();
+}
+
+/**
+ * Lifespan getter
+ * @return The lifespan of the Agent.
+ */
+const int Agent::getLifespan() const
+{
+    return _lifespan;
+}
+
+/**
+ * Lifespan setter
+ * @param lifespan the lifespan of the agent.
+ */
+void Agent::setLifespan(const int lifespan)
+{
+    _lifespan = lifespan;
+}
+
+/**
+ * Field of vision getter
+ * @return The lifespan of the Agent.
+ */
+const int Agent::getFieldOfVision() const
+{
+    return _fieldOfVision;
+}
+
+/**
+ * Age getter
+ * @return The age of the Agent.
+ */
+const int Agent::getAge() const
+{
+    return _age;
+}
+
+/**
+ * Add one year for an Agent.
+ */
+void Agent::addAge()
+{
+    _age += 1;
+}
+
+void Agent::changeBehaviour(IBehaviour * behaviour)
+{
+    if (_behaviour)
+    {
+        delete _behaviour;
+    }
+    
+    this->_behaviour = behaviour;
+}
+
+IBehaviour * Agent::getBehaviour() const
+{
+    return this->_behaviour;
+}
+
+bool Agent::act(Agent *** matrix, DataStorage& data)
+{
+    return this->_behaviour->act(this, matrix, data);
+}
+

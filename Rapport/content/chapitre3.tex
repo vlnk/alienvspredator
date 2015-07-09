@@ -1,0 +1,97 @@
+L'execution du programme demande de nombreux paramètres : le nombre de tours souhaités, la taille de la matrice de jeu et les options d'affichage.
+
+L'execution \verb$alienvspredator 100 10 10 y$ donne l'initialisation de la matrice suivante avec un equilibrage entre le nombre d'Humains, d'Aliens et de Prédators :
+
+\begin{verbatim}
+P	.	.	.	A	.	.	.	.	.
+.	.	H	P	.	.	.	.	.	.
+.	.	.	P	.	.	.	.	.	.
+.	.	.	.	.	.	.	H	.	.
+.	.	.	A	H	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	P	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	H
+.	A	.	.	.	P	.	.	.	.
+.	.	.	A	.	.	P	.	.	H
+
+Number of agents : 15
+Number of deaths : 0
+Number of births : 0
+Number of iterations : 0
+\end{verbatim}
+
+Au bout de 100\textsuperscript{ième} tour on a :
+
+\begin{verbatim}
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	A	A	.	H	.
+.	A	.	.	A	.	.	A	A	.
+.	.	A	.	A	A	A	A	A	A
+.	.	.	.	.	A	A	A	A	A
+.	.	.	A	A	A	A	A	A	A
+.	.	A	A	A	A	.	A	A	A
+
+Number of agents : 31
+Number of deaths : 39
+Number of births : 55
+Number of iterations : 100
+\end{verbatim}
+
+On repère que tous les Prédators se sont fait tuer par les humains ou par vieillesse. De plus les Aliens dominent largement la partie, ceci est dû au fait que les agents on tendance à se bloquer dans un coin et à n'avoir que la possibilité de se reproduire avec les agents les plus proche.
+
+On peut observer la mort des Prédators au tour 31 :
+
+\begin{verbatim}
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	A	.	.	.	.
+.	.	.	.	.	.	.	.	H	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	A	A	.	.	.	A
+.	.	.	.	A	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	H	.	.	.	.	.
+.	.	P	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	H	.	.
+
+Number of agents : 8
+Number of deaths : 19
+Number of births : 12
+Number of iterations : 30
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	A	.	H	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	A	A	A	.	.	.	.
+.	.	.	.	.	.	.	.	.	A
+.	.	.	.	A	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	H	.	.	.	.	.
+.	.	P	.	.	.	.	.	H	.
+
+Number of agents : 9
+Number of deaths : 19
+Number of births : 13
+Number of iterations : 31
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	.	H	.
+.	.	.	.	.	A	.	.	.	.
+.	.	.	A	A	A	.	.	.	A
+.	.	.	.	A	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	.	.	.	.	.	.
+.	.	.	.	H	.	.	.	.	H
+
+Number of agents : 8
+Number of deaths : 20
+Number of births : 13
+Number of iterations : 32
+\end{verbatim}
+
+On observe de plus la reproduction entre deux Aliens qui donne naissance à un nouvelle Alien sur le terrain de jeu.
+
+On peut comparer cette évolution entre trois factions d'individu par rapport à un cycle Prédateur-Proie ou considérer l'évolution globale de la population et la comparer à l'évolution d'une population humaine.

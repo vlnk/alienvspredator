@@ -1,0 +1,24 @@
+//
+//  IBehaviour.cpp
+//  alienvspredator
+//
+//  Created by val on 14/03/2014.
+//
+//
+
+#include "IBehaviour.h"
+
+IBehaviour::IBehaviour():
+    _mvt(new Movement())
+{
+}
+
+IBehaviour::~IBehaviour()
+{
+    delete _mvt;
+}
+
+Movement * IBehaviour::getMovement()
+{
+    return _mvt;
+}

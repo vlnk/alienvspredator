@@ -1,0 +1,62 @@
+cmake_minimum_required(VERSION 2.8)
+
+set (CMAKE_CXX_FLAGS "-std=c++0x -stdlib=libc++ -g -Wall -O0")
+
+#turn on using solution folders
+set_property( GLOBAL PROPERTY USE_FOLDERS ON)
+
+#Projet
+project(AlienVersusPredator)
+set(EXECUTABLE_OUTPUT_PATH bin/)
+
+#Boost inclusion
+include(FindBoost)
+
+find_package(
+        Boost
+        REQUIRED
+        COMPONENTS
+        system
+)
+
+link_directories(${Boost_LIBRARY_DIRS})
+include_directories(${Boost_INCLUDE_DIRS})
+
+#Executable
+file(
+        GLOB
+        source_files
+
+        Source/main.cpp
+        Source/Logic/*
+        Source/Data/*
+        Source/Presentation/*
+        Source/Entity/*
+        Source/Behaviour/*
+)
+
+add_executable(
+        ${PROJECT_NAME}
+        ${source_files}
+)
+
+#Groups for Xcode
+set(LOGIC ".*/Source/Logic/")
+set(DATA ".*/Source/Data/")
+set(PRESENTATION ".*/Source/Presentation/")
+set(ENTITY ".*/Source/Entity/")
+set(BEHAVIOUR ".*/Source/Behaviour/")
+set(REG_EXT "[^/]*([.]cpp|[.]c|[.]h|[.]hpp)$")
+
+source_group(Logic REGULAR_EXPRESSION "${LOGIC}${REG_EXT}")
+source_group(Data REGULAR_EXPRESSION "${DATA}${REG_EXT}")
+source_group(Presentation REGULAR_EXPRESSION "${PRESENTATION}${REG_EXT}")
+source_group(Entity REGULAR_EXPRESSION "${ENTITY}${REG_EXT}")
+source_group(Behaviour REGULAR_EXPRESSION "${BEHAVIOUR}${REG_EXT}")
+
+#Configuration of links
+target_link_libraries(
+        ${PROJECT_NAME}
+        ${Boost_SYSTEM_LIBRARY}
+)
+

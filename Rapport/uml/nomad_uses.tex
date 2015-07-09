@@ -1,0 +1,22 @@
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}
+		\begin{umlsystem}[x=0, fill=White]{NomadExecute}
+		\umlusecase[x=-0.5,y=0,name=opt,width=2cm,fill=Orchid!40]{optimiser les paramètre}
+		\umlusecase[x=5,y=0,name=use,fill=,fill=Orchid!40,width=2cm]{utilisation de NOMAD}
+		\umlusecase[x=1,y=-4,width=2cm,name=find,fill=Orchid!40]{trouver l'emplacement de NOMAD}
+		\umlusecase[x=5,y=-4,name=txt,fill=Orchid!40,width=2cm]{lecture des paramètres au format txt}
+		\end{umlsystem}
+
+		\umlactor[x=-4,y=-1.5]{utilisateur}
+		\umlactor[x=9,y=-1.5]{nomad}
+
+		\umlinclude{opt}{use}
+		\umlinclude{use}{find}
+		\umlinclude{use}{txt}
+
+		\umlassoc{utilisateur}{opt}
+		\umlassoc{use}{nomad}
+	\end{tikzpicture}
+	\caption{Diagramme d'utilisation de l'exécution de \textit{nomad}}
+\end{figure}

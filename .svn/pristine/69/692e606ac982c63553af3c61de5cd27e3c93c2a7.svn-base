@@ -1,0 +1,81 @@
+/**
+ * Make a movement for each Agent
+ * @file Movement.cpp
+ * @author Valentin Laurent
+ * @date 13/03/2014
+ */
+
+#include "Movement.h"
+/**
+ * Move an Agent in a random direction
+ * @param *a an Agent pointer.
+ * @param ***cpy_matrix the copy of the field of game.
+ */
+bool Movement::move(Agent *a, DataStorage& data, int direction)
+{
+	bool    deplace = false;
+    bool    cannot_move = false;
+    int     try_to_move = 0;
+    int     width = data.getWidth();
+    int     height = data.getHeight();
+    
+	do
+	{
+		switch (direction) {
+			case UP:
+				if (a->getCoordinate().y > 0)
+				{
+					deplace = move(a, data, a->getCoordinate().x, a->getCoordinate().y - 1);
+				}
+				break;
+			case RIGHT:
+				if (a->getCoordinate().x < width)
+				{
+					deplace = move(a, data, a->getCoordinate().x + 1, a->getCoordinate().y);
+				}
+				break;
+			case DOWN:
+				if (a->getCoordinate().y < height)
+				{
+					deplace = move(a, data, a->getCoordinate().x, a->getCoordinate().y + 1);
+				}
+				break;
+			default:
+				if (a->getCoordinate().x > 0)
+				{
+					deplace = move(a, data, a->getCoordinate().x - 1, a->getCoordinate().y);
+				}
+				break;
+		}
+        
+        try_to_move++;
+        
+        if (try_to_move > 3) {
+            cannot_move = true;
+        }
+        
+	} while (!deplace && !cannot_move);
+    
+    return deplace;
+}
+
+/**
+ * Move Agent in a precise direction
+ * @param *a an Agent pointer.
+ * @param x an integer for moving on the x-axis.
+ * @param y an integer for moving on the y-axis.
+ */
+bool Movement::move(Agent * a, DataStorage& data, int x, int y)
+{
+    bool deplace = false;
+    
+	if (!data.getMatrix()[x][y])
+	{
+		data.getMatrix()[a->getCoordinate().x][a->getCoordinate().y] = NULL;
+		a->setCoordinate(x, y);
+		data.getMatrix()[x][y] = a;
+        deplace = true;
+	}
+    
+    return deplace;
+}

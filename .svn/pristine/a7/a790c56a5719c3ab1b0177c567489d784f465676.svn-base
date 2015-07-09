@@ -1,0 +1,42 @@
+/*
+ * ConsolePresentation.cpp
+ *
+ *  Created on: 11 janv. 2014
+ *  Author: Vavou
+ */
+
+#include "ConsolePresentation.hpp"
+
+/**
+ * ConsolePresentation constructor
+ */
+ConsolePresentation::ConsolePresentation() {
+}
+
+/**
+ * ConsolePresentation destructor
+ */
+ConsolePresentation::~ConsolePresentation() {
+}
+
+/**
+ * Displayer of the matrix of Agents for each step.
+ * @param **matrix the matrix of Agents.
+ * @param width the width of the matrix.
+ * @param heigth the heigth of the matrix.
+ */
+void ConsolePresentation::updateMatrixDisplay(Agent ***matrix, int width, int heigth)
+{
+	for (int i = 0 ; i < width ; ++i)
+	{
+		for (int j = 0 ; j < heigth ; ++j)
+		{
+			if (matrix[i][j])
+				std::cout << *matrix[i][j] << "\t";
+			else
+				std::cout << "." << "\t";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+}

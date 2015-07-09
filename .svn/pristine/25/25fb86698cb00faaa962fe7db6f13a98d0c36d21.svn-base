@@ -1,0 +1,81 @@
+/**
+ * Main programm
+ * @file main.cpp
+ * @author Valentin Laurent & Valentin Elvassore
+ * @date 11 septembre 2007
+ */
+
+#include <iostream>
+#include <sstream>
+#include <cstring>
+#include "Logic/GameController.hpp"
+
+/**
+ * The main function
+ * @param int argc Take the number of arguments.
+ * @param int argv[1] The number of iteration.
+ * @param int argv[2] The width of the matrix.
+ * @param int argv[3] The height of the matrix.
+ * @param char argv[4] Set the coloration for agent in terminal
+ */
+int main (int argc, char * const argv[]) {
+    
+    if (argc < 2)
+    {
+        std::cout << "USE : " << argv[0] << std::endl;
+        std::cout << '\t' << "<number of iterations> " << std::endl;
+        std::cout << '\t' << "<width of the simulation field> " << std::endl;
+        std::cout << '\t' << "<height of the simulation field> " << std::endl;
+        std:: cout << '\t' << "<colorful terminal y|n>" << std::endl;
+        
+        std::cout << "EXEMPLE : " << argv[0] <<
+        " 10 10 10 n" << std::endl;
+    }
+    else
+    {
+        std::stringstream ss;
+        int iterations = 10;
+        int width = 10;
+        int height = 10;
+        bool setcolor = false;
+        
+        //set iterations
+        if (argc >= 2)
+        {
+            ss.clear();
+            ss << argv[1];
+            ss >> iterations;
+        }
+        
+        //set width of matrix
+        if (argc >= 3)
+        {
+            ss.clear();
+            ss << argv[2];
+            ss >> width;
+        }
+        
+        //set height of matrix
+        if (argc >= 4)
+        {
+            ss.clear();
+            ss << argv[3];
+            ss >> height;
+        }
+        
+        //set if ASCII colors must be implemented
+        if (argc >= 5 && (std::strcmp(argv[4], "y") == 0))
+        {
+            setcolor = true;
+        }
+        
+        GameController gc = GameController::getInstance(width, height, setcolor);
+
+        for (int i = 0 ; i < iterations ; ++i)
+        {
+            gc.progress(setcolor);
+        }
+    }
+
+    return 0;
+}

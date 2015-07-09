@@ -1,0 +1,60 @@
+/**
+ * The manager of all logical algoritms.
+ * @file GameController.hpp
+ * @author Valentin Elvassor
+ * @author Valentin Laurent
+ * @date Janvier 2014
+ */
+
+#ifndef GAMECONTROLLER_HPP_
+#define GAMECONTROLLER_HPP_
+
+#include <cstddef>
+#include <cstdlib>
+#include <cmath>
+#include <boost/signals2.hpp>
+#include <boost/bind.hpp>
+#include "../Data/DataStorage.hpp"
+#include "../Presentation/ConsolePresentation.hpp"
+#include "MersenneTwister.h"
+
+class DataStorage;
+class IBehaviour;
+
+/**
+ * The game controller contains all logical algorithms to move all agents.
+ * @class GameController
+ * @author Valentin Elvassor
+ */
+class GameController {
+    
+private:
+    
+    //Constructor (Singleton)
+    GameController(int, int, int);
+    
+	static GameController * _instance;      /**< Instance variable for singleton behaviour. */
+	DataStorage&            _data;          /**< Managment of the data with the class DataStorage. */
+	ConsolePresentation&    _presentation;  /**< Managment of the presentation with the class ConsolePresentation. */
+    MersenneTwister  _mt;                   /**< Random Number Generator. */
+ 
+public:
+    //Destructor
+    ~GameController();
+    
+    //Accessors
+	static GameController& getInstance(int = 0, int = 0);
+	const DataStorage& getData() const;
+	double getRandom(double = 0, double = 1);
+    
+    //Methods
+	void progress();
+    
+    //Constante
+    const static double PROPORTIONS_CUMULEES_BY_ACTIONS[3];
+    const static double PROPORTIONS_CUMULEES_BY_DESIRE[2];
+    const static int NUMBER_OF_ACTIONS = 1;
+    const static int NUM_OF_DIRECTIONS = 4;
+};
+
+#endif /* GAMECONTROLLER_HPP_ */

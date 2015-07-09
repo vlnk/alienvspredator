@@ -1,0 +1,38 @@
+/**
+ * Make a movement for each Agent
+ * @file Movement.h
+ * @author Valentin Laurent
+ * @date 13/03/2014
+ */
+
+#ifndef __MOVEMENT_H__
+#define __MOVEMENT_H__
+
+#include <iostream>
+#include <boost/signals2.hpp>
+#include "../Entity/Alien.hpp"
+
+class Movement
+{
+public:
+    //Constructor
+    Movement(){};
+    
+    //Destructor
+    ~Movement(){};
+    
+    //Signal
+    boost::signals2::signal<bool (Agent *, int, int)> moveSig;
+    
+    //Methods
+    bool move(Agent *, int, int, int);
+    bool move(Agent *, int, int);
+    
+    //Enumeration
+    enum move_t { UP, RIGHT, DOWN, LEFT, NOWHERE };
+    
+    //Constante
+    static const int NUM_OF_DIRECTIONS = 4;
+};
+
+#endif /*__MOVEMENT_H__*/

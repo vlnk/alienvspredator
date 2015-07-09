@@ -1,0 +1,45 @@
+cmake_minimum_required(VERSION 2.8)
+
+set (CMAKE_CXX_FLAGS "-std=c++0x -stdlib=libc++ -g3 -Wall -O0")
+
+#Projet
+project(MyProject)
+set(EXECUTABLE_OUTPUT_PATH bin/)
+
+#Boost inclusion
+include(FindBoost)
+
+find_package(
+        Boost
+        COMPONENTS
+        signals
+        REQUIRED
+)
+
+link_directories(${Boost_LIBRARY_DIRS})
+include_directories(${Boost_INCLUDE_DIRS})
+
+#Executable
+file(
+        GLOB_RECURSE
+        source_files
+
+        Source/main.cpp
+        Source/Logic/*
+        Source/Data/*
+        Source/Presentation/*
+        Source/Entity/*
+        Source/Behaviour/*
+)
+
+add_executable(
+        my_exe
+        ${source_files}
+)
+
+#Configuration of links
+target_link_libraries(
+                my_exe
+                ${Boost_SYSTEM_LIBRARY}
+)
+

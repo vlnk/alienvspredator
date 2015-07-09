@@ -1,0 +1,279 @@
+/**
+ * DataStorage.cpp
+ *
+ *  Created on: 11 janv. 2014
+ *  Author: Vavou
+ */
+
+#include "DataStorage.hpp"
+
+/**
+ * Cumulative proportions for filling the matrix.
+ */
+const double DataStorage::PROPORTIONS_CUMULEES[4] = {0.04, 0.08, 0.12, 1};
+
+/**
+ * DataStorage constructor
+ * @param width The width of the matrix.
+ * @param height The height of the matrix.
+ */
+DataStorage::DataStorage(int width, int height):
+    _width(width),
+    _height(height),
+    _num_of_deaths(0),
+    _num_of_births(0)
+{
+	_agents.clear();
+	initMatrix();
+}
+
+/**
+ * DataStorage destructor.
+ */
+DataStorage::~DataStorage() 
+{
+    for (std::vector<Agent *>::iterator it = _agents.begin();
+         it != _agents.end(); ++it)
+    {
+        delete (*it);
+    }
+    
+    for (int i = 0; i < _width; ++i)
+    {
+        delete[] _matrix[i];
+    }
+    
+    delete[] _matrix;
+}
+
+/**
+ * Initialize the matrix of Agents.
+ */
+void DataStorage::initMatrix()
+{
+	double random;
+	_matrix = new Agent**[_width];
+
+	for (int i = 0 ; i < _width ; ++i)
+	{
+		_matrix[i] = new Agent*[_height];
+		for (int j = 0 ; j < _height ; ++j)
+		{
+			random = GameController::getInstance().getRandom();
+			if (random < PROPORTIONS_CUMULEES[0])
+            {
+				_matrix[i][j] = new Alien(i,j);
+            }
+			else if (random < PROPORTIONS_CUMULEES[1])
+            {
+				_matrix[i][j] = new Human(i,j);
+            }
+			else if (random < PROPORTIONS_CUMULEES[2])
+            {
+				_matrix[i][j] = new Predator(i,j);
+            }
+			else
+            {
+				_matrix[i][j] = NULL;
+            }
+            
+			if (_matrix[i][j])
+            {
+                _agents.push_back(_matrix[i][j]);
+            }
+		}
+	}
+}
+
+/**
+ * Height getter.
+ * @return _height The height of the matrix.
+ */
+int DataStorage::getHeight() const
+{
+	return _height;
+}
+
+/**
+ * Height setter.
+ * @param height Assigning height value to _height attribute.
+ */
+void DataStorage::setHeight(int height) {
+	_height = height;
+}
+
+/**
+ * Width getter.
+ * @return _width The width of the matrix.
+ */
+int DataStorage::getWidth() const {
+	return _width;
+}
+
+/**
+ * Width setter.
+ * @param width Assigning width value to _width attribute
+ */
+void DataStorage::setWidth(int width) {
+	_width = width;
+}
+
+/**
+ * The Agent vector getter.
+ * @return vector<Agent*> The agents vector.
+ */
+const std::vector<Agent*> DataStorage::getAgents() const {
+	return _agents;
+}
+
+Agent* DataStorage::getAgentAt(int index) const
+{
+    Agent * r = NULL;
+    
+    if (index < _agents.size()) {
+        r = _agents[index];
+    }
+    
+    return r;
+}
+
+/**
+ * The Agent vector setter.
+ * @param vector<Agent*> A vector of agents.
+ */
+void DataStorage::setAgents(const std::vector<Agent*> agents) {
+	_agents = agents;
+}
+
+/**
+ * The matrix of Agents getter.
+ * @return _matrix The matrix of agents
+ */
+Agent*** DataStorage::getMatrix() const {
+	return _matrix;
+}
+
+/**
+ * Delete an Agent of the game
+ * @param ag An Agent to delete.
+ * @exception TO DO
+ */
+void DataStorage::destroyAgent(Agent *ag)
+{
+    std::vector<Agent*>::iterator it = _agents.begin();
+    
+    //std::cout << "Agent " << ag->toString() << " was killed" << std::endl;
+    
+    //find the Agent
+    for (; (*it != ag) && (it != _agents.end()); ++it);
+    
+    if (*it == ag)
+    {
+        _agents.erase(it);
+        _num_of_deaths++;
+        _matrix[ag->getCoordinate().x][ag->getCoordinate().y] = NULL;
+    }
+    else
+    {
+        //throw
+    }
+}
+
+/**
+ * Copy the matrix of DataStorage
+ * @return A copy of _matrix.
+ */
+Agent *** DataStorage::copyOfMatrix()
+{
+    Agent *** matrix_tmp = new Agent**[_width];
+    
+    for (int i = 0; i < _width; ++i)
+    {
+        matrix_tmp[i] = new Agent*[_height];
+        
+        for (int j = 0; j < _height; ++j)
+        {
+            matrix_tmp[i][j] = _matrix[i][j];
+        }
+    }
+    return matrix_tmp;
+}
+
+/**
+ * Check if two agents can make love and give birth.
+ * @param mother the mother of the new child.
+ * @param x the x-coordinate of the new child.
+ * @param y the y-coordinate of the new child.
+ */
+void DataStorage::giveBirth(Agent * mother, int x, int y)
+{
+    Agent * child;
+    
+    child = mother->giveBirth(x, y);
+    
+    if (child->toString() == "Ag")
+    {
+        std::cout << "ERREUR" << std::endl;
+    }
+    else
+    {
+        _num_of_births++;
+        _agents.push_back(child);
+        _matrix[x][y] = child;
+    }
+}
+
+/**
+ * Add one year for all population
+ */
+void DataStorage::ageingPopulation()
+{
+    for (std::vector<Agent*>::iterator it = _agents.begin();
+         it != _agents.end(); ++it)
+    {
+        (*it)->addAge();
+    }
+}
+
+/**
+ * Check if an agent can move and move it.
+ * @param Agent* An agent to move.
+ * @param x The x-coordinate of the new location of the agent.
+ * @param y The y-coordinate of the new location of the agent.
+ */
+bool DataStorage::moveAgent(Agent * ag, int x, int y)
+{
+    bool deplace = false;
+    
+	if (!_matrix[x][y])
+	{
+		_matrix[ag->getCoordinate().x][ag->getCoordinate().y] = NULL;
+		ag->setCoordinate(x, y);
+		_matrix[x][y] = ag;
+        deplace = true;
+    }
+    else
+    {
+        //std::cout << "Agent " << ag->toString() << " can't move !" << std::endl;
+    }
+    
+    return deplace;
+}
+
+/**
+ * Getter of the number of kills.
+ * @return The number of kills.
+ */
+int DataStorage::getNumOfDeaths() const
+{
+    return _num_of_deaths;
+}
+
+/**
+ * Getter of the number of births.
+ * @return The number of births.
+ */
+int DataStorage::getNumOfBirths() const
+{
+    return _num_of_births;
+}

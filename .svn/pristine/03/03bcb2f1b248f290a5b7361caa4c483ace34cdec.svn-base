@@ -1,0 +1,35 @@
+/**
+ * Make a movement for each Agent
+ * @file Movement.h
+ * @author Valentin Laurent
+ * @date 13/03/2014
+ */
+
+#ifndef __MOVEMENT_H__
+#define __MOVEMENT_H__
+
+#include <iostream>
+#include "../Entity/Alien.hpp"
+#include "../Data/DataStorage.hpp"
+
+class Movement
+{
+public:
+    //Constructor
+    Movement(){};
+    
+    //Destructor
+    ~Movement(){};
+    
+    //Methods
+    bool move(Agent *, DataStorage&, int = 0);
+    bool move(Agent *, DataStorage&, int, int);
+    
+    //Enumeration
+    enum move_t { UP, RIGHT, DOWN, LEFT, NOWHERE };
+    
+    //Constante
+    static const int NUM_OF_DIRECTIONS = 4;
+};
+
+#endif /*__MOVEMENT_H__*/

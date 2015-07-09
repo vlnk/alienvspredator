@@ -1,0 +1,25 @@
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}
+		\begin{umlsystem}[x=0, fill=White]{BlackBoxParser}
+		\umlusecase[x=0,y=0,name=rech,width=2cm,fill=OrangeRed!20]{rechercher les paramètres}
+		\umlusecase[x=0,y=-4,name=lire,fill=,fill=OrangeRed!20]{lire les paramètres}
+		\umlusecase[x=5,y=0,width=2cm,name=parse,fill=OrangeRed!20]{parsage des paramètres de la black box}
+		\umlusecase[x=5,y=-3,name=txt,fill=OrangeRed!20]{au format .txt}
+		\umlusecase[x=5,y=-5,name=xml,fill=OrangeRed!20]{au format .xml}
+		\end{umlsystem}
+
+		\umlactor[x=-4,y=-1.5]{utilisateur}
+		\umlactor[x=9,y=-1.5]{blackbox}
+
+		\umlinclude{rech}{parse}
+		\umlextend{txt}{lire}
+		\umlextend{xml}{lire}
+		\umlinclude{lire}{parse}
+
+		\umlassoc{utilisateur}{rech}
+		\umlassoc{utilisateur}{lire}
+		\umlassoc{parse}{blackbox}
+	\end{tikzpicture}
+	\caption{Diagramme d'utilisation du parsage des paramètres de la \textit{black box}}
+\end{figure}

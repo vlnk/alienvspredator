@@ -1,0 +1,41 @@
+\section{Code Test}
+\begin{lstlisting}[style=c++]
+#ifndef __ANIMAL_HPP__
+#define __ANIMAL_HPP__
+
+#include <iostream>
+#include <string>
+#include "Personnage.hpp"
+#define NAX_INTELLIGENCE 10
+
+class Animal : virtual public Personnage {
+private:
+	std::string 	faculte_;
+
+
+public:
+	//constructor
+	Animal(std::string, bool = true, int = 5, std::string = "Normal");
+
+	//destructor
+	~Animal();
+
+	//copy
+	Animal(const Animal&);
+	Animal * clone() const;
+
+	//affectation
+	Animal& operator = (const Animal&);
+
+	//getter
+	inline std::string getFaculte() const {return faculte_;};
+
+	//setter
+	void setFaculte(std::string);
+	void decrire(std::ostream& o) const;
+};
+
+#endif
+\end{lstlisting}
+
+\lstinputlisting[style=c++]{Conte.cpp}

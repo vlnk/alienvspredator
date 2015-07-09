@@ -1,0 +1,97 @@
+/**
+ * Define the defenssive behaviour of agents, when an agent whant to avoid fights.
+ * @file DefensiveBehaviour.cpp
+ * @author Laurent Valentin
+ * @date 13/03/2014
+ */
+
+#include "DefensiveBehaviour.h"
+
+
+bool DefensiveBehaviour::act(Agent * ag, Agent *** matrix, DataStorage& data)
+{
+    Movement * mvt = new Movement();
+    int direction = flee(ag, matrix, data);
+    bool achieve = false;
+    
+    if (direction == Movement::NOWHERE)
+    {
+        achieve = mvt->move(ag, data);
+    }
+    else
+    {
+        achieve = mvt->move(ag, data, direction);
+    }
+    
+    return achieve;
+}
+
+move_t DefensiveBehaviour::flee(Agent* ag, Agent*** cpy_matrix, DataStorage& data)
+{
+    int     direction = 0;
+    bool    find = false;
+    bool    end = false;
+    int     distance = 1;
+    int     x = ag->getCoordinate().x;
+    int     y = ag->getCoordinate().y;
+    
+    do
+    {
+        switch (direction) {
+            case UP:
+                if ((y > (distance - 1)) &&
+                    (cpy_matrix[x][y - distance]))
+                {
+                    find = ag->isFeared(cpy_matrix[x][y - distance]);
+                }
+                break;
+            case RIGHT:
+                if ((x < data.getWidth() - distance) &&
+                    (cpy_matrix[x + distance][y]))
+                {
+                    find = ag->isFeared(cpy_matrix[x + distance][y]);
+                }
+                break;
+            case DOWN:
+                if ((y < data.getHeight() - distance) &&
+                    (cpy_matrix[x][y + distance]))
+                {
+                    find = ag->isFeared(cpy_matrix[x][y + distance]);
+                }
+                break;
+            default:
+                if ((x > (distance - 1)) &&
+                    (cpy_matrix[x - distance][y]))
+                {
+                    find = ag->isFeared(cpy_matrix[x - distance][y]);
+                }
+                break;
+        }
+        
+        direction = (direction + 1) % Movement::NUM_OF_DIRECTIONS;
+        
+        if (direction == 0)
+        {
+            distance++;
+            
+            if (distance > data.getWidth() ||
+                distance > data.getHeight() ||
+                distance > ag->getFieldOfVision())
+            {
+                end = true;
+            }
+        }
+        
+    } while (!find && !end);
+    
+    if (find)
+    {
+        direction = (direction + Movement::NUM_OF_DIRECTIONS/2) % Movement::NUM_OF_DIRECTIONS;
+    }
+    else
+    {
+        direction = NOWHERE;
+    }
+    
+    return (move_t)direction;
+}

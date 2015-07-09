@@ -1,0 +1,65 @@
+/**
+ * The Agent class
+ * @file Agent.hpp
+ * @author Valentin Laurent & Valentin Elvassore
+ */
+
+#ifndef AGENT_HPP
+#define AGENT_HPP
+
+#include "coordinate.h"
+#include <ostream>
+
+class IBehaviour;
+class DataStorage;
+
+/**
+ * The class Agent contains all virtual methods for each specific Agent (Alien, Human, Predator).
+ */
+class Agent {
+    
+private:
+	coordinate_t _coordinate;   /**< The position coordonates of the Agent.*/
+    
+protected:
+    int _lifespan;
+    int _age;
+    int _fieldOfVision;
+    IBehaviour * _behaviour;
+    
+public:
+	//Constructor
+	Agent(int, int, int, int, int);
+	
+	//Destructor
+	virtual ~Agent() = 0;
+	
+    //Accessors
+	coordinate_t getCoordinate() const {return _coordinate;}
+	void setCoordinate(int, int);
+    const int getLifespan() const;
+    void setLifespan(const int lifespan);
+	virtual std::string toString() const;
+    const int getAge() const;
+    const int getFieldOfVision() const;
+    
+    //Methods
+    virtual void attack(Agent *) = 0;
+    virtual Agent* giveBirth(const int,const int) = 0;
+    virtual bool isSameType(Agent*) = 0;
+    void addAge();
+    virtual bool isPrey(Agent*) = 0;
+    virtual bool isFeared(Agent*) = 0;
+    
+    bool act(Agent***, DataStorage&);
+    void changeBehaviour(IBehaviour *);
+    IBehaviour * getBehaviour() const;
+    
+    //Constante
+    const static int SEXUAL_MAJORITY = 15;
+    const static int AVERAGE_LIFETIME = 10;
+};
+
+std::ostream& operator<<(std::ostream &, Agent const&);
+
+#endif

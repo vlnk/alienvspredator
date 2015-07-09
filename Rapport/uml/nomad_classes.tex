@@ -1,0 +1,24 @@
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}
+	\begin{umlpackage}[fill=White]{NomadManager}
+	\umlclass[fill=White]{NomadExecute}{
+		file\_param : xml\_file \\
+		path : string
+	}{
+		find\_nomad() : string \\ 
+	}
+
+	\umlclass[x=10,fill=White]{xmlParser}{
+		xml\_parse : minidom \\
+		path : string
+	}{
+		parsetotxt() : void \\ 
+	}
+	\end{umlpackage}
+
+	\umluniassoc[arg=Création du fichier param.txt,pos=0.5,name=xml]{NomadExecute}{xmlParser}
+	\umlnote[x=5,y=-2]{xmlParser}{Importe le fichier XML créé par xmlCreator.}
+	\end{tikzpicture}
+	\caption{Diagramme de classes de l'execution de \textit{Nomad}}
+\end{figure}

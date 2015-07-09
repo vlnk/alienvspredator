@@ -1,0 +1,13 @@
+#ifndef MOVE_H
+#define MOVE_H
+
+typedef enum
+{
+	UP,
+	RIGHT,
+	DOWN,
+	LEFT,
+    NOWHERE
+} move_t;
+
+#endif

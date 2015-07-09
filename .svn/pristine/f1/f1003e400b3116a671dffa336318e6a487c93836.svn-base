@@ -1,0 +1,25 @@
+/*
+ * ConsolePresentation.hpp
+ *
+ *  Created on: 11 janv. 2014
+ *  Author: Valentin LAURENT & Valentin ELVASSORE
+ */
+
+#ifndef CONSOLEPRESENTATION_HPP_
+#define CONSOLEPRESENTATION_HPP_
+
+#include <iostream>
+#include "../Entity/Agent.hpp"
+
+/**
+ * The class ConsolePresentation describes all methodes to display the game.
+ */
+class ConsolePresentation {
+    
+public:
+	ConsolePresentation();
+	void updateMatrixDisplay(Agent ***, int, int);
+	virtual ~ConsolePresentation();
+};
+
+#endif /* CONSOLEPRESENTATION_HPP_ */

@@ -1,0 +1,28 @@
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture} 
+		\begin{umlseqdiag}
+		\umlactor[class=user, fill=White]{u}
+		\umlentity[x=2.5,class=BlackBox, fill=OrangeRed!20]{b}
+		\umlmulti[x=8,class=xml]{x}
+		\umlobject[x=5.5,class=BlackBoxParser, fill=OrangeRed!20]{bb}
+		\umlobject[x=11,class=NomadExecute, fill=Orchid!40]{ne}
+		\umlentity[x=14,class=Nomad, fill=Orchid!40]{n}
+		\begin{umlcall}[op=lance, type=synchron, return=fichierXML]{u}{bb}
+		\begin{umlcall}[op=execute, type=synchron, return=paramètres]{bb}{b}
+		\end{umlcall}
+		\begin{umlcall}[op=créerXML, return=fichierXML]{bb}{x}
+		\end{umlcall}
+		\end{umlcall}
+		\begin{umlcall}[op=lance, type=synchron, return=resultatNOMAD]{u}{ne}
+		\begin{umlcall}[op=chargeParam, type=synchron, return=fichierTXT]{ne}{x}
+		\end{umlcall}
+		\begin{umlcall}[op=trouveNOMAD, type=synchron, return=chemin]{ne}{n}
+		\end{umlcall}
+		\begin{umlcall}[op=execute, type=synchron, return=résultats]{ne}{n}
+		\end{umlcall}
+		\end{umlcall}
+		\end{umlseqdiag}
+	\end{tikzpicture}
+	\caption{Diagramme de séquence du lancement de NOMAD}
+\end{figure}

@@ -1,0 +1,122 @@
+/**
+ * Define the defenssive behaviour of agents, when an agent whant to avoid fights.
+ * @file DefensiveBehaviour.cpp
+ * @author Laurent Valentin
+ * @date 13/03/2014
+ */
+
+#include "DefensiveBehaviour.h"
+
+/**
+ * The DefensiveBehaviour constructor.
+ */
+DefensiveBehaviour::DefensiveBehaviour()
+{
+}
+
+/**
+ * The flee of the agent when it feels its will die soon. 
+ * @param ag The fugitive agent
+ * @param matrix The matrix of agents (copy).
+ * @param width The width of the matrix.
+ * @param height The height of the matrix.
+ */
+bool DefensiveBehaviour::act(Agent * ag, Agent *** matrix, int width, int height)
+{
+    int direction = flee(ag, matrix, width, height);
+    bool achieve = false;
+    
+    if (direction == Movement::NOWHERE)
+    {
+        achieve = _mvt->move(
+            ag, width, height, round((GameController::getInstance().getRandom())));
+    }
+    else
+    {
+        achieve = _mvt->move(ag, width, height, direction);
+    }
+    
+    _distance = 1;
+    
+    return achieve;
+}
+
+/**
+ * The agent feels it must flee away.
+ * @param ag The fugitive agent.
+ * @param cpy_matrix The matrix of agents (copy).
+ * @param width The width of the matrix.
+ * @param height The height of the matrix.
+ */
+Movement::move_t DefensiveBehaviour::flee(Agent* ag, Agent*** cpy_matrix, int width, int height)
+{
+    int     direction = 0;
+    bool    find = false;
+    bool    end = false;
+    int     x = ag->getCoordinate().x;
+    int     y = ag->getCoordinate().y;
+    
+    do
+    {
+        switch (direction) {
+            case Movement::UP:
+                if ((x > (_distance - 1)) &&
+                    (cpy_matrix[x - _distance][y]))
+                {
+                    find = ag->isFeared(cpy_matrix[x - _distance][y]);
+                }
+                break;
+            case Movement::RIGHT:
+                if ((y < height - _distance) &&
+                    (cpy_matrix[x][y + _distance]))
+                {
+                    find = ag->isFeared(cpy_matrix[x][y + this->_distance]);
+                }
+                break;
+            case Movement::DOWN:
+                if ((x < width - _distance) &&
+                    (cpy_matrix[x + _distance][y]))
+                {
+                    find = ag->isFeared(cpy_matrix[x + _distance][y]);
+                }
+                break;
+            default:
+                if ((y > (_distance - 1)) &&
+                    (cpy_matrix[x][y - this->_distance]))
+                {
+                    find = ag->isFeared(cpy_matrix[x][y - _distance]);
+                }
+                break;
+        }
+        
+        if (!find)
+        {
+            direction = (direction + 1) % Movement::NUM_OF_DIRECTIONS;
+            
+            if (direction == 0)
+            {
+                _distance++;
+            }
+        }
+        
+        if (_distance > width ||
+            _distance > height ||
+            _distance > ag->getFieldOfVision())
+        {
+            end = true;
+        }
+        
+    } while (!find && !end);
+    
+    if (find)
+    {
+        //std::cout << "Agent " << ag->toString() << " fear..." << std::endl;
+        direction = (direction + Movement::NUM_OF_DIRECTIONS/2) % Movement::NUM_OF_DIRECTIONS;
+    }
+    else
+    {
+        direction = Movement::NOWHERE;
+    }
+    
+    return (Movement::move_t)direction;
+}

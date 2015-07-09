@@ -1,0 +1,29 @@
+/**
+ * Define the defenssive behaviour of agents, when an agent whant to avoid fights.
+ * @file DefensiveBehaviour.h
+ * @author Laurent Valentin
+ * @date 13/03/2014
+ */
+
+#ifndef __DEFENSIVEBEHAVIOUR_HPP__
+#define __DEFENSIVEBEHAVIOUR_HPP__
+
+#include <iostream>
+#include "IBehaviour.h"
+
+class DefensiveBehaviour : public IBehaviour
+{
+private:
+    int _distance;
+public:
+    //Constructor
+    DefensiveBehaviour();
+    
+    //Destructor
+    ~DefensiveBehaviour(){};
+    
+    bool act(Agent *, Agent ***, int, int);
+    Movement::move_t flee(Agent *, Agent ***, int, int);
+};
+
+#endif /*__DEFENSIVEBEHAVIOUR_HPP__*/

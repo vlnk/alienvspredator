@@ -1,0 +1,32 @@
+\begin{figure}[h!]
+	\centering
+  	\begin{tikzpicture}
+	\begin{umlpackage}[fill=White]{Presentation}
+		\umlclass[fill=White]{BlackBloxParser}{}{}
+	\end{umlpackage}
+
+	\begin{umlpackage}[fill=White]{Logic}
+		\umlclass[x=10, fill=White]{xmlCreator}{}{}
+	\end{umlpackage}
+
+	\begin{umlpackage}[fill=White]{Data}
+		\umlclass[x=10, fill=White]{xmlCreator}{}{}
+	\end{umlpackage}
+
+	\begin{umlpackage}[fill=White]{Entity}
+		\umlclass[x=10, fill=White]{xmlCreator}{}{}
+	\end{umlpackage}
+
+	\begin{umlpackage}[fill=White]{Behaviour}
+		\umlclass[x=10, fill=White]{IBehaviour}{}{}
+	\end{umlpackage}
+
+	\umluniassoc[arg=Création du fichier XML,pos=0.5,name=xml]{BlackBloxParser}{xmlCreator}
+	\umlnote[x=5, y=-2]{xml-1}{Création du fichier XML dans le repertoire de la Black Box.}
+	\umlaggreg[mult1=*, pos1=0.1, mult2=1, pos2=0.9]{BlackBloxParser}{Parameter}
+	\umlinherit[geometry=|-|]{ProblemParameter}{Parameter}
+	\umlinherit[geometry=|-|]{AlgorithmicParameter}{Parameter}
+	\umlinherit[geometry=|-|]{OutputParameter}{Parameter}
+	\end{tikzpicture}
+	\caption{Diagramme de classes de l'analyse de la \textit{Black Box}}
+\end{figure}

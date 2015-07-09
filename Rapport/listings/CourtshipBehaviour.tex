@@ -1,0 +1,30 @@
+\begin{lstlisting}[style=c++]
+#include <iostream>
+#include <boost/signals2.hpp>
+#include "IBehaviour.h"
+
+/**
+ * The courtship behaviour for each agent.
+ * @class CourtshipBehaviour
+ * @author Valentin Laurent
+ */
+class CourtshipBehaviour : public IBehaviour
+{
+public:
+    //Constructor
+    CourtshipBehaviour();
+    
+    //Destructor
+    ~CourtshipBehaviour(){};    /**<Courtship behaviour destructor.*/
+    
+    //Signal
+    boost::signals2::signal<void (Agent *, int, int)> loveSig;  /**<A signal to the DataStorage in order to give a birth to a new agent.*/
+    
+    //Methods
+    bool love(Agent *, Agent ***, int, int, int);
+    Movement::move_t findLove(Agent*, Agent***, int, int);
+    void makeLove(Agent *, int, int);
+    bool act(Agent *, Agent ***, int, int);
+    
+};
+\end{lstlisting}

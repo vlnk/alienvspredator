@@ -1,0 +1,6 @@
+typedef struct {
+public:
+	int x;
+	int y;
+} coordinate_t;
+

@@ -1,0 +1,838 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              8F4A3916738F46B48D507234 /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = DF48275394ED4377BC266CBE /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            F51C40B2E99240C0817D4CE3 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            D485EA6D2F6F434393192294 /* PBXTargetDependency */,
+                            3071B74487D142EF921C26A5 /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              B4154BC9479A41E28882662F /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 95865345902E4E49BFF93C21 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            1A7EE49785F04B31B368D963 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+311A9B4BA4EB473683D8B5CF /* /Users/val/Developer/C++ projects/alienvspredator/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 52BE278C7BB8422BBF0F621C /* /Users/val/Developer/C++ projects/alienvspredator/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+6F7FB8DD52A54BA69F448921 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/AggressiveBehaviour.cpp */ = {isa = PBXBuildFile; fileRef = 5F1D5A483A9745B9A27BE900 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/AggressiveBehaviour.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+BA6DA0C0018B4B10AB694570 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/AggressiveBehaviour.h */ = {isa = PBXBuildFile; fileRef = 4F5133F21CAD4FB7B2A21EDF /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/AggressiveBehaviour.h */; settings = { COMPILER_FLAGS = ""; }; };
+346B21785D20453E9ED6C6A2 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/CourtshipBehaviour.cpp */ = {isa = PBXBuildFile; fileRef = 1FDB88BA7CFD4CA6A58F5727 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/CourtshipBehaviour.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+B6EEE93B8F0841C791D25C8E /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/CourtshipBehaviour.h */ = {isa = PBXBuildFile; fileRef = 8E705E2109DC4FF19C358336 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/CourtshipBehaviour.h */; settings = { COMPILER_FLAGS = ""; }; };
+677A13DC3C2D4906B3F2693C /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/DefensiveBehaviour.cpp */ = {isa = PBXBuildFile; fileRef = 881B18EE5B5F4F87BF4B12C6 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/DefensiveBehaviour.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+97BC8385CDC848A3AF1E0E27 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/DefensiveBehaviour.h */ = {isa = PBXBuildFile; fileRef = 0BACECD6257A45F08D8BD595 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/DefensiveBehaviour.h */; settings = { COMPILER_FLAGS = ""; }; };
+0226E896948F499589ACEE1B /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/IBehaviour.cpp */ = {isa = PBXBuildFile; fileRef = 03F18C7C1B2749BB98F1ACE1 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/IBehaviour.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+FCC7C063B49C4678A4330BBC /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/IBehaviour.h */ = {isa = PBXBuildFile; fileRef = 1A021A0D035A4208A1664CF9 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/IBehaviour.h */; settings = { COMPILER_FLAGS = ""; }; };
+28722817C4064EDCA2D5BF11 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/Movement.cpp */ = {isa = PBXBuildFile; fileRef = 3D3E51D9394E43C3951C1762 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/Movement.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+6295530DB341488D8BC77274 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/Movement.h */ = {isa = PBXBuildFile; fileRef = 02EA703ED2684844A419037C /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/Movement.h */; settings = { COMPILER_FLAGS = ""; }; };
+F7CD517E9F4841CBBA1FC20B /* /Users/val/Developer/C++ projects/alienvspredator/Source/Data/DataStorage.cpp */ = {isa = PBXBuildFile; fileRef = C909F8F292274940B012CE53 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Data/DataStorage.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+7B01A4F0781C4DB5BE3BBCE0 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Data/DataStorage.hpp */ = {isa = PBXBuildFile; fileRef = 07CDD1194A4A49D79ACDD722 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Data/DataStorage.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+17ADC0D49D6A417C9241A0FD /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/.DS_Store */ = {isa = PBXBuildFile; fileRef = BEA17D407A484253BC8F1B25 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/.DS_Store */; settings = { COMPILER_FLAGS = ""; }; };
+C1511B3F0CE644FC91BB6AD1 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Agent.cpp */ = {isa = PBXBuildFile; fileRef = F19C96A2696B451BBAC5A6A4 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Agent.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+7C7198214FD542CAAFC843B7 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Agent.hpp */ = {isa = PBXBuildFile; fileRef = 5FC41508AC7745F5BB393538 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Agent.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+995E209346E74B159CA7095E /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Alien.cpp */ = {isa = PBXBuildFile; fileRef = D547BB2A04E54C65B33BD54A /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Alien.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+10A46654BACA4088B53FB3EE /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Alien.hpp */ = {isa = PBXBuildFile; fileRef = 7EFD6018CDF94CC0B64F47F4 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Alien.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+67D80F3D88DF46F7AFEE369A /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Human.cpp */ = {isa = PBXBuildFile; fileRef = E4912E7304FD4284A13EE034 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Human.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+C1AC8595B6B24997A0CB2377 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Human.hpp */ = {isa = PBXBuildFile; fileRef = CF067AF7203E45B3B6DF2B61 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Human.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+22F8FCE3D9634BC68F297070 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Predator.cpp */ = {isa = PBXBuildFile; fileRef = 4CA81BECD2774FD4AA7AA2F8 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Predator.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+E6506F26581E4518B3FAC404 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Predator.hpp */ = {isa = PBXBuildFile; fileRef = 7A8C619D64DB47F0AE5F4CA0 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Predator.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+B54FF6669C214569927E0729 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/coordinate.h */ = {isa = PBXBuildFile; fileRef = F6E1B852D51649D48E8793D6 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/coordinate.h */; settings = { COMPILER_FLAGS = ""; }; };
+666D6BC09FEE4924BB2AE138 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/GameController.cpp */ = {isa = PBXBuildFile; fileRef = 84964BCDC1DA4BFEB31DE81F /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/GameController.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+D94892C433F24356B32BD5AF /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/GameController.hpp */ = {isa = PBXBuildFile; fileRef = 662303D48BAC4A3584913917 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/GameController.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+049070C28EAE4DD7830FA21C /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/MersenneTwister.cpp */ = {isa = PBXBuildFile; fileRef = 220AFFC3F20C4F829594F06E /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/MersenneTwister.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+52F29D5DA98D4A9F9E8B1716 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/MersenneTwister.h */ = {isa = PBXBuildFile; fileRef = 8127B600E0CB4BBA80FD3DF6 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/MersenneTwister.h */; settings = { COMPILER_FLAGS = ""; }; };
+AB5CD897221840A2905E3C2C /* /Users/val/Developer/C++ projects/alienvspredator/Source/Presentation/ConsolePresentation.cpp */ = {isa = PBXBuildFile; fileRef = 99D18A204539447CA9BB6541 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Presentation/ConsolePresentation.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+FE2804F0CDF24894813CFC02 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Presentation/ConsolePresentation.hpp */ = {isa = PBXBuildFile; fileRef = E5C34758BDF54BB6B215DB0E /* /Users/val/Developer/C++ projects/alienvspredator/Source/Presentation/ConsolePresentation.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+98F48393446A4202BE9F4676 /* /Users/val/Developer/C++ projects/alienvspredator/Source/main.cpp */ = {isa = PBXBuildFile; fileRef = 8A7A6BC394DF44B9A5CC9DD1 /* /Users/val/Developer/C++ projects/alienvspredator/Source/main.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              7CE16F81E73F4CDEB601DC85 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              DA66A8442139417F9C970FB7 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              07A0B3B6AE8E4C058528CBE4 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+              35EB4FFE9A7544809309E8B1 /* MinSizeRel */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = MinSizeRel;
+              };
+              5E0AF68FB3F44D42BB6A2103 /* RelWithDebInfo */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              F0506BCC62C84ADCA2E14129 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 17EDE05C4FEA4603AB761CBA /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = B4154BC9479A41E28882662F;
+                     remoteInfo = ZERO_CHECK;
+              };
+              5E69780DF44E499B9F51D494 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 17EDE05C4FEA4603AB761CBA /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 9B4043C9E4B545F2A3F80A2A;
+                     remoteInfo = AlienVersusPredator;
+              };
+              0B2F2F22217B4175AD7B3CA2 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 17EDE05C4FEA4603AB761CBA /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = B4154BC9479A41E28882662F;
+                     remoteInfo = ZERO_CHECK;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+52BE278C7BB8422BBF0F621C /* /Users/val/Developer/C++ projects/alienvspredator/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+5F1D5A483A9745B9A27BE900 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/AggressiveBehaviour.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "AggressiveBehaviour.cpp"; path = "Source/Behaviour/AggressiveBehaviour.cpp"; sourceTree = SOURCE_ROOT; };
+4F5133F21CAD4FB7B2A21EDF /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/AggressiveBehaviour.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "AggressiveBehaviour.h"; path = "Source/Behaviour/AggressiveBehaviour.h"; sourceTree = SOURCE_ROOT; };
+1FDB88BA7CFD4CA6A58F5727 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/CourtshipBehaviour.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CourtshipBehaviour.cpp"; path = "Source/Behaviour/CourtshipBehaviour.cpp"; sourceTree = SOURCE_ROOT; };
+8E705E2109DC4FF19C358336 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/CourtshipBehaviour.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CourtshipBehaviour.h"; path = "Source/Behaviour/CourtshipBehaviour.h"; sourceTree = SOURCE_ROOT; };
+881B18EE5B5F4F87BF4B12C6 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/DefensiveBehaviour.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "DefensiveBehaviour.cpp"; path = "Source/Behaviour/DefensiveBehaviour.cpp"; sourceTree = SOURCE_ROOT; };
+0BACECD6257A45F08D8BD595 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/DefensiveBehaviour.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "DefensiveBehaviour.h"; path = "Source/Behaviour/DefensiveBehaviour.h"; sourceTree = SOURCE_ROOT; };
+03F18C7C1B2749BB98F1ACE1 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/IBehaviour.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "IBehaviour.cpp"; path = "Source/Behaviour/IBehaviour.cpp"; sourceTree = SOURCE_ROOT; };
+1A021A0D035A4208A1664CF9 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/IBehaviour.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "IBehaviour.h"; path = "Source/Behaviour/IBehaviour.h"; sourceTree = SOURCE_ROOT; };
+3D3E51D9394E43C3951C1762 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/Movement.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Movement.cpp"; path = "Source/Behaviour/Movement.cpp"; sourceTree = SOURCE_ROOT; };
+02EA703ED2684844A419037C /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/Movement.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "Movement.h"; path = "Source/Behaviour/Movement.h"; sourceTree = SOURCE_ROOT; };
+C909F8F292274940B012CE53 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Data/DataStorage.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "DataStorage.cpp"; path = "Source/Data/DataStorage.cpp"; sourceTree = SOURCE_ROOT; };
+07CDD1194A4A49D79ACDD722 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Data/DataStorage.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "DataStorage.hpp"; path = "Source/Data/DataStorage.hpp"; sourceTree = SOURCE_ROOT; };
+BEA17D407A484253BC8F1B25 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/.DS_Store */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ".DS_Store"; path = "Source/Entity/.DS_Store"; sourceTree = SOURCE_ROOT; };
+F19C96A2696B451BBAC5A6A4 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Agent.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Agent.cpp"; path = "Source/Entity/Agent.cpp"; sourceTree = SOURCE_ROOT; };
+5FC41508AC7745F5BB393538 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Agent.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "Agent.hpp"; path = "Source/Entity/Agent.hpp"; sourceTree = SOURCE_ROOT; };
+D547BB2A04E54C65B33BD54A /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Alien.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Alien.cpp"; path = "Source/Entity/Alien.cpp"; sourceTree = SOURCE_ROOT; };
+7EFD6018CDF94CC0B64F47F4 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Alien.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "Alien.hpp"; path = "Source/Entity/Alien.hpp"; sourceTree = SOURCE_ROOT; };
+E4912E7304FD4284A13EE034 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Human.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Human.cpp"; path = "Source/Entity/Human.cpp"; sourceTree = SOURCE_ROOT; };
+CF067AF7203E45B3B6DF2B61 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Human.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "Human.hpp"; path = "Source/Entity/Human.hpp"; sourceTree = SOURCE_ROOT; };
+4CA81BECD2774FD4AA7AA2F8 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Predator.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Predator.cpp"; path = "Source/Entity/Predator.cpp"; sourceTree = SOURCE_ROOT; };
+7A8C619D64DB47F0AE5F4CA0 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Predator.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "Predator.hpp"; path = "Source/Entity/Predator.hpp"; sourceTree = SOURCE_ROOT; };
+F6E1B852D51649D48E8793D6 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/coordinate.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "coordinate.h"; path = "Source/Entity/coordinate.h"; sourceTree = SOURCE_ROOT; };
+84964BCDC1DA4BFEB31DE81F /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/GameController.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "GameController.cpp"; path = "Source/Logic/GameController.cpp"; sourceTree = SOURCE_ROOT; };
+662303D48BAC4A3584913917 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/GameController.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "GameController.hpp"; path = "Source/Logic/GameController.hpp"; sourceTree = SOURCE_ROOT; };
+220AFFC3F20C4F829594F06E /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/MersenneTwister.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "MersenneTwister.cpp"; path = "Source/Logic/MersenneTwister.cpp"; sourceTree = SOURCE_ROOT; };
+8127B600E0CB4BBA80FD3DF6 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/MersenneTwister.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "MersenneTwister.h"; path = "Source/Logic/MersenneTwister.h"; sourceTree = SOURCE_ROOT; };
+99D18A204539447CA9BB6541 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Presentation/ConsolePresentation.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "ConsolePresentation.cpp"; path = "Source/Presentation/ConsolePresentation.cpp"; sourceTree = SOURCE_ROOT; };
+E5C34758BDF54BB6B215DB0E /* /Users/val/Developer/C++ projects/alienvspredator/Source/Presentation/ConsolePresentation.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "ConsolePresentation.hpp"; path = "Source/Presentation/ConsolePresentation.hpp"; sourceTree = SOURCE_ROOT; };
+8A7A6BC394DF44B9A5CC9DD1 /* /Users/val/Developer/C++ projects/alienvspredator/Source/main.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "main.cpp"; path = "Source/main.cpp"; sourceTree = SOURCE_ROOT; };
+5D0A26B64503471A94AD5B18 /* AlienVersusPredator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = AlienVersusPredator; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              8B2955F2D48E464783F353CF  = {
+                     isa = PBXGroup;
+                     children = (
+                            15B8C78534504AA0A7001212 /* Sources */,
+                            3E9223A9FDFB4F7EAB9997C1 /* Resources */,
+                            8E07F4B8E9F94CE1BB2A52C2 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              15B8C78534504AA0A7001212 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            29959A1B5F144FD18511905A /* ALL_BUILD */,
+                            E884AA60949C4743938DB23F /* AlienVersusPredator */,
+                            2B79A49B8B5043D3BE8CCF81 /* ZERO_CHECK */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              3E9223A9FDFB4F7EAB9997C1 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              29959A1B5F144FD18511905A /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            CF2CFD2D98BF40F6B92EC498 /* CMake Rules */,
+                            52BE278C7BB8422BBF0F621C /* /Users/val/Developer/C++ projects/alienvspredator/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              CF2CFD2D98BF40F6B92EC498 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              E884AA60949C4743938DB23F /* AlienVersusPredator */ = {
+                     isa = PBXGroup;
+                     children = (
+                            5A9FA58F8923439197435918 /* Source Files */,
+                            231CB994C2F5413CB8A236FF /* Logic */,
+                            F2885582C6394566912973FA /* Data */,
+                            D303D23841F64A2DB4507CFB /* Presentation */,
+                            B2BE67732E1048D68B488062 /* Entity */,
+                            4FD1A3E31AD448F9826A2BA7 /* Behaviour */,
+                            52BE278C7BB8422BBF0F621C /* /Users/val/Developer/C++ projects/alienvspredator/CMakeLists.txt */,
+                            BEA17D407A484253BC8F1B25 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/.DS_Store */,
+                     );
+                     name = AlienVersusPredator;
+                     sourceTree = "<group>";
+              };
+              5A9FA58F8923439197435918 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            8A7A6BC394DF44B9A5CC9DD1 /* /Users/val/Developer/C++ projects/alienvspredator/Source/main.cpp */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              231CB994C2F5413CB8A236FF /* Logic */ = {
+                     isa = PBXGroup;
+                     children = (
+                            84964BCDC1DA4BFEB31DE81F /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/GameController.cpp */,
+                            662303D48BAC4A3584913917 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/GameController.hpp */,
+                            220AFFC3F20C4F829594F06E /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/MersenneTwister.cpp */,
+                            8127B600E0CB4BBA80FD3DF6 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/MersenneTwister.h */,
+                     );
+                     name = Logic;
+                     sourceTree = "<group>";
+              };
+              F2885582C6394566912973FA /* Data */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C909F8F292274940B012CE53 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Data/DataStorage.cpp */,
+                            07CDD1194A4A49D79ACDD722 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Data/DataStorage.hpp */,
+                     );
+                     name = Data;
+                     sourceTree = "<group>";
+              };
+              D303D23841F64A2DB4507CFB /* Presentation */ = {
+                     isa = PBXGroup;
+                     children = (
+                            99D18A204539447CA9BB6541 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Presentation/ConsolePresentation.cpp */,
+                            E5C34758BDF54BB6B215DB0E /* /Users/val/Developer/C++ projects/alienvspredator/Source/Presentation/ConsolePresentation.hpp */,
+                     );
+                     name = Presentation;
+                     sourceTree = "<group>";
+              };
+              B2BE67732E1048D68B488062 /* Entity */ = {
+                     isa = PBXGroup;
+                     children = (
+                            F19C96A2696B451BBAC5A6A4 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Agent.cpp */,
+                            5FC41508AC7745F5BB393538 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Agent.hpp */,
+                            D547BB2A04E54C65B33BD54A /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Alien.cpp */,
+                            7EFD6018CDF94CC0B64F47F4 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Alien.hpp */,
+                            E4912E7304FD4284A13EE034 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Human.cpp */,
+                            CF067AF7203E45B3B6DF2B61 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Human.hpp */,
+                            4CA81BECD2774FD4AA7AA2F8 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Predator.cpp */,
+                            7A8C619D64DB47F0AE5F4CA0 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Predator.hpp */,
+                            F6E1B852D51649D48E8793D6 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/coordinate.h */,
+                     );
+                     name = Entity;
+                     sourceTree = "<group>";
+              };
+              4FD1A3E31AD448F9826A2BA7 /* Behaviour */ = {
+                     isa = PBXGroup;
+                     children = (
+                            5F1D5A483A9745B9A27BE900 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/AggressiveBehaviour.cpp */,
+                            4F5133F21CAD4FB7B2A21EDF /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/AggressiveBehaviour.h */,
+                            1FDB88BA7CFD4CA6A58F5727 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/CourtshipBehaviour.cpp */,
+                            8E705E2109DC4FF19C358336 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/CourtshipBehaviour.h */,
+                            881B18EE5B5F4F87BF4B12C6 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/DefensiveBehaviour.cpp */,
+                            0BACECD6257A45F08D8BD595 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/DefensiveBehaviour.h */,
+                            03F18C7C1B2749BB98F1ACE1 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/IBehaviour.cpp */,
+                            1A021A0D035A4208A1664CF9 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/IBehaviour.h */,
+                            3D3E51D9394E43C3951C1762 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/Movement.cpp */,
+                            02EA703ED2684844A419037C /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/Movement.h */,
+                     );
+                     name = Behaviour;
+                     sourceTree = "<group>";
+              };
+              2B79A49B8B5043D3BE8CCF81 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            AD999A4FDCC44CBFA91A9086 /* CMake Rules */,
+                            52BE278C7BB8422BBF0F621C /* /Users/val/Developer/C++ projects/alienvspredator/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              AD999A4FDCC44CBFA91A9086 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              8E07F4B8E9F94CE1BB2A52C2 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            5D0A26B64503471A94AD5B18 /* AlienVersusPredator */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              9B4043C9E4B545F2A3F80A2A /* AlienVersusPredator */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = F459C3291BF54EFAB9A277CC /* Build configuration list for PBXNativeTarget "AlienVersusPredator" */;
+                     buildPhases = (
+                            9BC066ACED474E56B143B9A8 /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            4E09A75479A84FE39CB5D635 /* PBXTargetDependency */,
+                     );
+                     name = AlienVersusPredator;
+                     productName = AlienVersusPredator;
+                     productReference = 5D0A26B64503471A94AD5B18 /* AlienVersusPredator */;
+                     productType = "com.apple.product-type.tool";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              17EDE05C4FEA4603AB761CBA /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 16E0336E85B54151BF0965CB /* Build configuration list for PBXProject  "AlienVersusPredator" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            DA66A8442139417F9C970FB7 /* Debug */,
+                            07A0B3B6AE8E4C058528CBE4 /* Release */,
+                            35EB4FFE9A7544809309E8B1 /* MinSizeRel */,
+                            5E0AF68FB3F44D42BB6A2103 /* RelWithDebInfo */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = 8B2955F2D48E464783F353CF;
+                     projectDirPath = ".";
+                     projectRoot = "";
+                     targets = (
+                            8F4A3916738F46B48D507234 /* ALL_BUILD */,
+                            9B4043C9E4B545F2A3F80A2A /* AlienVersusPredator */,
+                            B4154BC9479A41E28882662F /* ZERO_CHECK */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              2411B117DB884E8D8F849B28 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              F51C40B2E99240C0817D4CE3 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/val/Developer/C++\\ projects/alienvspredator -f /Users/val/Developer/C++\\ projects/alienvspredator/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              6E60A00FB9E84FD5A66DF174 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              1A7EE49785F04B31B368D963 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/val/Developer/C++\\ projects/alienvspredator -f /Users/val/Developer/C++\\ projects/alienvspredator/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              9BC066ACED474E56B143B9A8 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            6F7FB8DD52A54BA69F448921 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/AggressiveBehaviour.cpp */,
+                            346B21785D20453E9ED6C6A2 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/CourtshipBehaviour.cpp */,
+                            677A13DC3C2D4906B3F2693C /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/DefensiveBehaviour.cpp */,
+                            0226E896948F499589ACEE1B /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/IBehaviour.cpp */,
+                            28722817C4064EDCA2D5BF11 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Behaviour/Movement.cpp */,
+                            F7CD517E9F4841CBBA1FC20B /* /Users/val/Developer/C++ projects/alienvspredator/Source/Data/DataStorage.cpp */,
+                            C1511B3F0CE644FC91BB6AD1 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Agent.cpp */,
+                            995E209346E74B159CA7095E /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Alien.cpp */,
+                            67D80F3D88DF46F7AFEE369A /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Human.cpp */,
+                            22F8FCE3D9634BC68F297070 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Entity/Predator.cpp */,
+                            666D6BC09FEE4924BB2AE138 /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/GameController.cpp */,
+                            049070C28EAE4DD7830FA21C /* /Users/val/Developer/C++ projects/alienvspredator/Source/Logic/MersenneTwister.cpp */,
+                            AB5CD897221840A2905E3C2C /* /Users/val/Developer/C++ projects/alienvspredator/Source/Presentation/ConsolePresentation.cpp */,
+                            98F48393446A4202BE9F4676 /* /Users/val/Developer/C++ projects/alienvspredator/Source/main.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              D485EA6D2F6F434393192294 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = B4154BC9479A41E28882662F /* ZERO_CHECK */;
+                     targetProxy = F0506BCC62C84ADCA2E14129 /* PBXContainerItemProxy */;
+              };
+              3071B74487D142EF921C26A5 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 9B4043C9E4B545F2A3F80A2A /* AlienVersusPredator */;
+                     targetProxy = 5E69780DF44E499B9F51D494 /* PBXContainerItemProxy */;
+              };
+              4E09A75479A84FE39CB5D635 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = B4154BC9479A41E28882662F /* ZERO_CHECK */;
+                     targetProxy = 0B2F2F22217B4175AD7B3CA2 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              22D75374452E4E18BDAFAB68 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator/build";
+                     };
+                     name = Debug;
+              };
+              B1F9FFDD134D44B2B0A3EB80 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator/build";
+                     };
+                     name = Release;
+              };
+              02CC405994A8415DADC13CBF /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator/build";
+                     };
+                     name = MinSizeRel;
+              };
+              1C8BB69E7E904FFBA95E59E2 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator/build";
+                     };
+                     name = RelWithDebInfo;
+              };
+              FA0C85D39D9E4B15AA848846 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              C23EC1F2880C411C9806F4F8 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              B505E550F51F4C5CA3E43E18 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              32A0B521FCDA4F9AABD10FB1 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              98A5DABBF6F7419FBA3E2627 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/val/Developer/C++ projects/alienvspredator/bin/Debug";
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+                            LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+                            OTHER_CFLAGS = "    ";
+                            OTHER_CPLUSPLUSFLAGS = "-std=c++0x -stdlib=libc++    -Wall         ";
+                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libboost_system-mt.dylib";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = AlienVersusPredator;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              123DADA641074BF1A91BFCA9 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/val/Developer/C++ projects/alienvspredator/bin/Release";
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+                            LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+                            OTHER_CFLAGS = "    -DNDEBUG   ";
+                            OTHER_CPLUSPLUSFLAGS = "-std=c++0x -stdlib=libc++    -Wall         -DNDEBUG -g  ";
+                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libboost_system-mt.dylib";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = AlienVersusPredator;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              0CE9694C4A4244978218A1BC /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/val/Developer/C++ projects/alienvspredator/bin/MinSizeRel";
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+                            LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+                            OTHER_CFLAGS = "    -DNDEBUG   ";
+                            OTHER_CPLUSPLUSFLAGS = "-std=c++0x -stdlib=libc++    -Wall         -DNDEBUG -g  ";
+                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libboost_system-mt.dylib";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = AlienVersusPredator;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              2C87BFC1B69F487DBDA6C58D /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/val/Developer/C++ projects/alienvspredator/bin/RelWithDebInfo";
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+                            LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+                            OTHER_CFLAGS = "       -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = "-std=c++0x -stdlib=libc++    -Wall            -DNDEBUG  ";
+                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libboost_system-mt.dylib";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = AlienVersusPredator;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              88B14B3522A64AB7B1E6E03C /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              6377A2BE4B7F44E4B5994FB0 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              92DF65C413D949B8AB4CBFEE /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              C97D155BE72E45FAA12CA7B4 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/val/Developer/C++ projects/alienvspredator";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              16E0336E85B54151BF0965CB /* Build configuration list for PBXProject  "AlienVersusPredator" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            22D75374452E4E18BDAFAB68 /* Debug */,
+                            B1F9FFDD134D44B2B0A3EB80 /* Release */,
+                            02CC405994A8415DADC13CBF /* MinSizeRel */,
+                            1C8BB69E7E904FFBA95E59E2 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              DF48275394ED4377BC266CBE /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            FA0C85D39D9E4B15AA848846 /* Debug */,
+                            C23EC1F2880C411C9806F4F8 /* Release */,
+                            B505E550F51F4C5CA3E43E18 /* MinSizeRel */,
+                            32A0B521FCDA4F9AABD10FB1 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              F459C3291BF54EFAB9A277CC /* Build configuration list for PBXNativeTarget "AlienVersusPredator" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            98A5DABBF6F7419FBA3E2627 /* Debug */,
+                            123DADA641074BF1A91BFCA9 /* Release */,
+                            0CE9694C4A4244978218A1BC /* MinSizeRel */,
+                            2C87BFC1B69F487DBDA6C58D /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              95865345902E4E49BFF93C21 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            88B14B3522A64AB7B1E6E03C /* Debug */,
+                            6377A2BE4B7F44E4B5994FB0 /* Release */,
+                            92DF65C413D949B8AB4CBFEE /* MinSizeRel */,
+                            C97D155BE72E45FAA12CA7B4 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = 17EDE05C4FEA4603AB761CBA;
+}

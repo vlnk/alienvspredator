@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>AlienVsPredator:  Fichier source de Source/Data/DataStorage.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AlienVsPredator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_24219af8397bfa3fa7c77e8c27a6d982.html">Data</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DataStorage.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_data_storage_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef DATASTORAGE_HPP_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DATASTORAGE_HPP_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../Entity/Agent.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../Entity/Human.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../Entity/Predator.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../Entity/Alien.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../Logic/GameController.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span><a class="code" href="class_game_controller.html">GameController</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_data_storage.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_data_storage.html">DataStorage</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_data_storage.html#a9a936181ffa32f4f09b8c29efa43e766">   31</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="class_data_storage.html#a9a936181ffa32f4f09b8c29efa43e766">_width</a>;             </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_data_storage.html#a110d524eec1727e85d589b2114af05c7">   32</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="class_data_storage.html#a110d524eec1727e85d589b2114af05c7">_height</a>;            </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_data_storage.html#a269391790b3aa9f42ed4a26e495aa4b6">   33</a></span>&#160;    <a class="code" href="class_agent.html">Agent</a> ***   <a class="code" href="class_data_storage.html#a269391790b3aa9f42ed4a26e495aa4b6">_matrix</a>;            </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_data_storage.html#ad1dd06302e6fec8a8b538750de2042bb">   34</a></span>&#160;    std::vector&lt;Agent *&gt; <a class="code" href="class_data_storage.html#ad1dd06302e6fec8a8b538750de2042bb">_agents</a>;   </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_storage.html#a9e4870e5d5c5a7a8063f84f5106c23e5">initMatrix</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_data_storage.html#a75aa503ec5eec213f849ee1431efef34">   38</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="class_data_storage.html#a75aa503ec5eec213f849ee1431efef34">_num_of_deaths</a>;      </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_data_storage.html#aabb08d7c0253272250223c18477d2eb4">   39</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="class_data_storage.html#aabb08d7c0253272250223c18477d2eb4">_num_of_births</a>;     </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//Constructor</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_data_storage.html#a9ac1d43d6070e92eedb66d66385e1705">DataStorage</a>(<span class="keywordtype">int</span> = 10, <span class="keywordtype">int</span> = 20);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">//Destructor</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_data_storage.html#adf4ef73e6d368dc7fcd213ba80e1d618">~DataStorage</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//Getters</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_data_storage.html#a2cfcf6ef535ca0bdf42bf7cb63b5a3b6">   49</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="class_data_storage.html#a2cfcf6ef535ca0bdf42bf7cb63b5a3b6">getHeight</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_data_storage.html#a110d524eec1727e85d589b2114af05c7">_height</a>;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_data_storage.html#a467c46dbcc9348c78e2d633b9c024f22">   50</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="class_data_storage.html#a467c46dbcc9348c78e2d633b9c024f22">getWidth</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_data_storage.html#a9a936181ffa32f4f09b8c29efa43e766">_width</a>;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_agent.html">Agent</a>*** <a class="code" href="class_data_storage.html#a4dc66841ddf65a46f7f3e7e952f44942">getMatrix</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_data_storage.html#a3524613571a0572db2e9399b712e816e">   52</a></span>&#160;    <span class="keyword">const</span> std::vector&lt;Agent*&gt;&amp; <a class="code" href="class_data_storage.html#a3524613571a0572db2e9399b712e816e">getAgents</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_data_storage.html#ad1dd06302e6fec8a8b538750de2042bb">_agents</a>;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_agent.html">Agent</a>* <a class="code" href="class_data_storage.html#a53e0eb23fee9015c82e29a92c8a44514">getAgentAt</a>(<span class="keywordtype">int</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_data_storage.html#a8d7294aa79efc2a92894371bb3f99ca0">   54</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="class_data_storage.html#a8d7294aa79efc2a92894371bb3f99ca0">getNumOfDeaths</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_data_storage.html#a75aa503ec5eec213f849ee1431efef34">_num_of_deaths</a>;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_data_storage.html#a9a8d8b95d45e769752b9133107a5f01b">   55</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="class_data_storage.html#a9a8d8b95d45e769752b9133107a5f01b">getNumOfBirths</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_data_storage.html#aabb08d7c0253272250223c18477d2eb4">_num_of_births</a>;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">//Setters</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_storage.html#a10092dc25f551060117b6a9764904784">setHeight</a>(<span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_storage.html#a380ed94fe92c809f9027ae9a13f0313b">setWidth</a>(<span class="keywordtype">int</span> width);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_storage.html#a5ffd59b28c83fd1669318c75a7f443f1">setAgents</a>(<span class="keyword">const</span> std::vector&lt;Agent*&gt; agents);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//Methods</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_storage.html#aca60c41b85882e689228adfb37be1402">destroyAgent</a>(<a class="code" href="class_agent.html">Agent</a> *);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_data_storage.html#adc32f9649ddc3f7a87481bfffd37e040">moveAgent</a>(<a class="code" href="class_agent.html">Agent</a> *, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_storage.html#a38d65067440ea237017bf9a3eea63883">giveBirth</a>(<a class="code" href="class_agent.html">Agent</a> *, <span class="keywordtype">int</span> , <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_storage.html#a4b095a770b292ce319f2d4202e7494c7">ageingPopulation</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_storage.html#a8259ab4b717ecb5f365b24682dc734c7">deathTime</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//Constants</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_data_storage.html#a07676196bf37cd5d844370321f3675d6">   71</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_data_storage.html#a07676196bf37cd5d844370321f3675d6">PROPORTIONS_CUMULEES</a>[4];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATASTORAGE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_data_storage_html_ad1dd06302e6fec8a8b538750de2042bb"><div class="ttname"><a href="class_data_storage.html#ad1dd06302e6fec8a8b538750de2042bb">DataStorage::_agents</a></div><div class="ttdeci">std::vector&lt; Agent * &gt; _agents</div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:34</div></div>
+<div class="ttc" id="class_data_storage_html_a110d524eec1727e85d589b2114af05c7"><div class="ttname"><a href="class_data_storage.html#a110d524eec1727e85d589b2114af05c7">DataStorage::_height</a></div><div class="ttdeci">int _height</div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:32</div></div>
+<div class="ttc" id="class_data_storage_html_a07676196bf37cd5d844370321f3675d6"><div class="ttname"><a href="class_data_storage.html#a07676196bf37cd5d844370321f3675d6">DataStorage::PROPORTIONS_CUMULEES</a></div><div class="ttdeci">static const double PROPORTIONS_CUMULEES[4]</div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:71</div></div>
+<div class="ttc" id="class_data_storage_html_a9a8d8b95d45e769752b9133107a5f01b"><div class="ttname"><a href="class_data_storage.html#a9a8d8b95d45e769752b9133107a5f01b">DataStorage::getNumOfBirths</a></div><div class="ttdeci">const int &amp; getNumOfBirths() const </div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:55</div></div>
+<div class="ttc" id="class_data_storage_html"><div class="ttname"><a href="class_data_storage.html">DataStorage</a></div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:28</div></div>
+<div class="ttc" id="class_data_storage_html_a8259ab4b717ecb5f365b24682dc734c7"><div class="ttname"><a href="class_data_storage.html#a8259ab4b717ecb5f365b24682dc734c7">DataStorage::deathTime</a></div><div class="ttdeci">void deathTime()</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:229</div></div>
+<div class="ttc" id="class_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdef"><b>Definition:</b> Agent.hpp:21</div></div>
+<div class="ttc" id="class_data_storage_html_a53e0eb23fee9015c82e29a92c8a44514"><div class="ttname"><a href="class_data_storage.html#a53e0eb23fee9015c82e29a92c8a44514">DataStorage::getAgentAt</a></div><div class="ttdeci">Agent * getAgentAt(int) const </div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:107</div></div>
+<div class="ttc" id="class_data_storage_html_adf4ef73e6d368dc7fcd213ba80e1d618"><div class="ttname"><a href="class_data_storage.html#adf4ef73e6d368dc7fcd213ba80e1d618">DataStorage::~DataStorage</a></div><div class="ttdeci">~DataStorage()</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:33</div></div>
+<div class="ttc" id="class_data_storage_html_a9ac1d43d6070e92eedb66d66385e1705"><div class="ttname"><a href="class_data_storage.html#a9ac1d43d6070e92eedb66d66385e1705">DataStorage::DataStorage</a></div><div class="ttdeci">DataStorage(int=10, int=20)</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:20</div></div>
+<div class="ttc" id="class_data_storage_html_a75aa503ec5eec213f849ee1431efef34"><div class="ttname"><a href="class_data_storage.html#a75aa503ec5eec213f849ee1431efef34">DataStorage::_num_of_deaths</a></div><div class="ttdeci">int _num_of_deaths</div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:38</div></div>
+<div class="ttc" id="class_data_storage_html_a4dc66841ddf65a46f7f3e7e952f44942"><div class="ttname"><a href="class_data_storage.html#a4dc66841ddf65a46f7f3e7e952f44942">DataStorage::getMatrix</a></div><div class="ttdeci">Agent *** getMatrix() const </div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:131</div></div>
+<div class="ttc" id="class_data_storage_html_aabb08d7c0253272250223c18477d2eb4"><div class="ttname"><a href="class_data_storage.html#aabb08d7c0253272250223c18477d2eb4">DataStorage::_num_of_births</a></div><div class="ttdeci">int _num_of_births</div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:39</div></div>
+<div class="ttc" id="class_data_storage_html_a38d65067440ea237017bf9a3eea63883"><div class="ttname"><a href="class_data_storage.html#a38d65067440ea237017bf9a3eea63883">DataStorage::giveBirth</a></div><div class="ttdeci">void giveBirth(Agent *, int, int)</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:170</div></div>
+<div class="ttc" id="class_data_storage_html_a5ffd59b28c83fd1669318c75a7f443f1"><div class="ttname"><a href="class_data_storage.html#a5ffd59b28c83fd1669318c75a7f443f1">DataStorage::setAgents</a></div><div class="ttdeci">void setAgents(const std::vector&lt; Agent * &gt; agents)</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:123</div></div>
+<div class="ttc" id="class_data_storage_html_a269391790b3aa9f42ed4a26e495aa4b6"><div class="ttname"><a href="class_data_storage.html#a269391790b3aa9f42ed4a26e495aa4b6">DataStorage::_matrix</a></div><div class="ttdeci">Agent *** _matrix</div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:33</div></div>
+<div class="ttc" id="class_data_storage_html_a380ed94fe92c809f9027ae9a13f0313b"><div class="ttname"><a href="class_data_storage.html#a380ed94fe92c809f9027ae9a13f0313b">DataStorage::setWidth</a></div><div class="ttdeci">void setWidth(int width)</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:103</div></div>
+<div class="ttc" id="class_data_storage_html_a9e4870e5d5c5a7a8063f84f5106c23e5"><div class="ttname"><a href="class_data_storage.html#a9e4870e5d5c5a7a8063f84f5106c23e5">DataStorage::initMatrix</a></div><div class="ttdeci">void initMatrix()</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:55</div></div>
+<div class="ttc" id="class_data_storage_html_a4b095a770b292ce319f2d4202e7494c7"><div class="ttname"><a href="class_data_storage.html#a4b095a770b292ce319f2d4202e7494c7">DataStorage::ageingPopulation</a></div><div class="ttdeci">void ageingPopulation()</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:195</div></div>
+<div class="ttc" id="class_data_storage_html_a10092dc25f551060117b6a9764904784"><div class="ttname"><a href="class_data_storage.html#a10092dc25f551060117b6a9764904784">DataStorage::setHeight</a></div><div class="ttdeci">void setHeight(int height)</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:95</div></div>
+<div class="ttc" id="class_game_controller_html"><div class="ttname"><a href="class_game_controller.html">GameController</a></div><div class="ttdef"><b>Definition:</b> GameController.hpp:29</div></div>
+<div class="ttc" id="class_data_storage_html_a9a936181ffa32f4f09b8c29efa43e766"><div class="ttname"><a href="class_data_storage.html#a9a936181ffa32f4f09b8c29efa43e766">DataStorage::_width</a></div><div class="ttdeci">int _width</div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:31</div></div>
+<div class="ttc" id="class_data_storage_html_adc32f9649ddc3f7a87481bfffd37e040"><div class="ttname"><a href="class_data_storage.html#adc32f9649ddc3f7a87481bfffd37e040">DataStorage::moveAgent</a></div><div class="ttdeci">bool moveAgent(Agent *, int, int)</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:210</div></div>
+<div class="ttc" id="class_data_storage_html_a8d7294aa79efc2a92894371bb3f99ca0"><div class="ttname"><a href="class_data_storage.html#a8d7294aa79efc2a92894371bb3f99ca0">DataStorage::getNumOfDeaths</a></div><div class="ttdeci">const int &amp; getNumOfDeaths() const </div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:54</div></div>
+<div class="ttc" id="class_data_storage_html_a467c46dbcc9348c78e2d633b9c024f22"><div class="ttname"><a href="class_data_storage.html#a467c46dbcc9348c78e2d633b9c024f22">DataStorage::getWidth</a></div><div class="ttdeci">const int &amp; getWidth() const </div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:50</div></div>
+<div class="ttc" id="class_data_storage_html_a3524613571a0572db2e9399b712e816e"><div class="ttname"><a href="class_data_storage.html#a3524613571a0572db2e9399b712e816e">DataStorage::getAgents</a></div><div class="ttdeci">const std::vector&lt; Agent * &gt; &amp; getAgents() const </div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:52</div></div>
+<div class="ttc" id="class_data_storage_html_a2cfcf6ef535ca0bdf42bf7cb63b5a3b6"><div class="ttname"><a href="class_data_storage.html#a2cfcf6ef535ca0bdf42bf7cb63b5a3b6">DataStorage::getHeight</a></div><div class="ttdeci">const int &amp; getHeight() const </div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:49</div></div>
+<div class="ttc" id="class_data_storage_html_aca60c41b85882e689228adfb37be1402"><div class="ttname"><a href="class_data_storage.html#aca60c41b85882e689228adfb37be1402">DataStorage::destroyAgent</a></div><div class="ttdeci">void destroyAgent(Agent *)</div><div class="ttdef"><b>Definition:</b> DataStorage.cpp:140</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 26 Mars 2014 18:26:11 pour AlienVsPredator par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

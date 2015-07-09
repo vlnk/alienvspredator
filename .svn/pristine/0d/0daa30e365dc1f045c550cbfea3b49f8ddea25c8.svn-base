@@ -1,0 +1,173 @@
+/**
+ * Define the aggressive behaviour of agents, when an agent whant to fight.
+ * @file AggressiveBehaviour.h
+ * @author Laurent Valentin
+ * @date 13/03/2014
+ */
+
+#include "AggressiveBehaviour.h"
+#include "../Logic/GameController.hpp"
+
+/**
+ * Aggressive behaviour constructor
+ */
+AggressiveBehaviour::AggressiveBehaviour():
+    _distance(1){}
+
+/**
+ * A fight of an Agent against all his neighboors
+ * @param ag an Agent who want to fight.
+ * @param cpy_matrix a copy of the field.
+ */
+bool AggressiveBehaviour::attack(Agent* ag, Agent*** cpy_matrix, DataStorage& data, int direction)
+{
+    bool    end_fighting = false;
+    bool    end;
+    Agent * ennemy = NULL;
+    int     x = ag->getCoordinate().x;
+    int     y = ag->getCoordinate().y;
+    
+    
+    do {
+        switch (direction) {
+            case UP:
+                if ((x > 0) && (cpy_matrix[x - 1][y]))
+                {
+                    ennemy = cpy_matrix[x - 1][y];
+                }
+                break;
+            case RIGHT:
+                if ((y < data.getHeight() - 1) && (cpy_matrix[x][y + 1]))
+                {
+                    ennemy = cpy_matrix[x][y + 1];
+                }
+                break;
+            case DOWN:
+                if ((x < data.getWidth() - 1) && (cpy_matrix[x + 1][y]))
+                {
+                    ennemy = cpy_matrix[x + 1][y];
+                }
+                break;
+            case LEFT:
+                if ((y > 0) && (cpy_matrix[x][y - 1]))
+                {
+                    ennemy = cpy_matrix[x][y - 1];
+                }
+                break;
+            default:
+                end = true;
+                break;
+        }
+        
+        if (ennemy && (!ag->isSameType(ennemy)))
+        {
+            ag->attack(ennemy);
+            killAgent(ennemy);
+            end_fighting = true;
+        }
+        
+        direction++;
+        
+    } while (!end && !((ag->getLifespan() != 0) && !end_fighting));
+    /*
+    if (ag->getLifespan() == 0)
+    {
+        killAgent(ag);
+    }*/
+    
+    return end_fighting;
+}
+
+move_t AggressiveBehaviour::findPrey(Agent* ag, Agent*** cpy_matrix, int width, int height)
+{
+    int     direction = 0;
+    bool    find = false;
+    bool    end = false;
+    int     x = ag->getCoordinate().x;
+    int     y = ag->getCoordinate().y;
+    
+    do
+    {
+        switch (direction) {
+            case UP:
+                if ((x > (this->_distance - 1)) &&
+                    (cpy_matrix[x - this->_distance][y]))
+                {
+                    find = ag->isPrey(cpy_matrix[x - this->_distance][y]);
+                }
+                break;
+            case RIGHT:
+                if ((y < height - this->_distance) &&
+                    (cpy_matrix[x][y + this->_distance]))
+                {
+                    find = ag->isPrey(cpy_matrix[x][y + this->_distance]);
+                }
+                break;
+            case DOWN:
+                if ((x < width - _distance) &&
+                    (cpy_matrix[x + this->_distance][y]))
+                {
+                    find = ag->isPrey(cpy_matrix[x + this->_distance][y]);
+                }
+                break;
+            default:
+                if ((y > (this->_distance - 1)) &&
+                    (cpy_matrix[x][y - this->_distance]))
+                {
+                    find = ag->isPrey(cpy_matrix[x][y - this->_distance]);
+                }
+                break;
+        }
+        
+        if (!find)
+        {
+            direction = (direction + 1) % Movement::NUM_OF_DIRECTIONS;
+        }
+        
+        if (this->_distance > width ||
+            this->_distance > height ||
+            this->_distance > ag->getFieldOfVision())
+        {
+            end = true;
+        }
+        else if (direction == 0)
+        {
+            this->_distance++;
+        }
+        
+    } while (!find && !end);
+    
+    if (end && !find)
+    {
+        direction = NOWHERE;
+    }
+    
+    return (move_t)direction;
+}
+
+bool AggressiveBehaviour::act(Agent * ag, Agent *** cpy_matrix, DataStorage &data)
+{
+    Movement * mvt = new Movement();
+    int direction = findPrey(ag, cpy_matrix, data.getWidth(), data.getHeight());
+    bool achieve = false;
+    
+    
+    if (direction == NOWHERE)
+    {
+        achieve = mvt->move(ag, data);
+    }
+    else if (this->_distance > 1)
+    {
+        achieve = mvt->move(ag, data, direction);
+    }
+    else
+    {
+        attack(ag, cpy_matrix, data, direction);
+        achieve = true;
+    }
+    
+    this->_distance = 1;
+    delete mvt;
+    
+    return achieve;
+}

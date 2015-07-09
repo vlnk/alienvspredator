@@ -1,0 +1,22 @@
+/**
+ * Pattern strategy
+ * @file DefensiveBehaviour.h
+ * @author Laurent Valentin
+ * @date 13/03/2014
+ */
+
+#ifndef __IBEHAVIOUR_HPP__
+#define __IBEHAVIOUR_HPP__
+
+#include <iostream>
+#include "Movement.h"
+#include "../Entity/Agent.hpp"
+
+class IBehaviour
+{
+public:
+    virtual ~IBehaviour() = 0;
+    virtual bool act(Agent *, Agent ***, DataStorage&) = 0;
+};
+
+#endif /*__IBEHAVIOUR_HPP__*/

@@ -1,0 +1,140 @@
+/**
+ * GameController.cpp
+ *
+ * Created on: 11 janv. 2014
+ * Author: Vavou
+ */
+
+#include "GameController.hpp"
+#include "../Behaviour/IBehaviour.h"
+#include "../Behaviour/AggressiveBehaviour.h"
+#include "../Behaviour/DefensiveBehaviour.h"
+#include "../Behaviour/CourtshipBehaviour.h"
+
+/**
+ * Cumulative proportions for choosing actions of Agents
+ */
+const double GameController::PROPORTIONS_CUMULEES_BY_ACTIONS[3] = {0.5, 0.9, 1};
+
+/**
+ * Cumulative proportions for choosing between "go to the prey" and "flee the feared Agent"
+ */
+const double GameController::PROPORTIONS_CUMULEES_BY_DESIRE[2] = {0.7, 1};
+
+/**
+ * Initialization of the instance variable (for the singleton behaviour).
+ */
+GameController* GameController::_instance = NULL;
+
+/**
+ * GameControler contructor
+ * @param width an integer to initialize the dimensions of the matrix
+ * @param height an integer to initialize the dimensions of the matrix
+ */
+GameController::GameController(int width, int height, int seed)
+	:_data(*new DataStorage(width, height)),
+	 _presentation(*new ConsolePresentation()),
+     _mt(seed)
+{
+	_presentation.updateMatrixDisplay(_data.getMatrix(), _data.getWidth(), _data.getHeight());
+}
+
+/**
+ * GameControler destructor
+ */
+GameController::~GameController()
+{
+    delete &_data;
+    delete &_presentation;
+    std::cout << "good bye" << std::endl;
+}
+
+/**
+ * Data getter
+ * @return _data the initialized objects for the game
+ */
+const DataStorage& GameController::getData() const
+{
+	return _data;
+}
+
+/**
+ * Instance getter, check if GameControler is already instanciate
+ * @param width the width of the playing field.
+ * @param height the height of the playing field.
+ * @return *_instance a bool which check the instantiation.
+ */
+GameController &GameController::getInstance(int width, int height)
+{
+	if (!_instance)
+		_instance = new GameController(width, height, (unsigned)time(NULL));
+	return *_instance;
+}
+
+/**
+ * Randomize actions while the game
+ * @param min an integer of the minimum value expected
+ * @param max an integer of the maximum value expected
+ * @return an random double
+ */
+double GameController::getRandom(double min, double max)
+{
+	return (_mt.genrand_real1() * (max-min) + min);
+}
+
+/**
+ * Progress the game by moving all Agents
+ */
+void GameController::progress()
+{
+	std::vector<Agent*> agentsNonTraites(_data.getAgents());
+	int                 alea;
+    int                 num_of_realized_actions;
+    bool                succeed_action;
+    double              random;
+	Agent           *   currentAgent;
+    Agent           *** cpy_matrix = _data.copyOfMatrix();
+
+	while (!agentsNonTraites.empty())
+	{
+		alea = (int) getRandom(0, agentsNonTraites.size() -1);
+		currentAgent = agentsNonTraites[alea];
+		agentsNonTraites.erase(agentsNonTraites.begin()+alea);
+        num_of_realized_actions = 0;
+        
+        do {
+            random = getRandom();
+            succeed_action = false;
+            
+            if (random < PROPORTIONS_CUMULEES_BY_ACTIONS[0])
+            {
+                currentAgent->changeBehaviour(new DefensiveBehaviour());
+            }
+            else if (random < PROPORTIONS_CUMULEES_BY_ACTIONS[1])
+            {
+                currentAgent->changeBehaviour(new AggressiveBehaviour());
+            }
+            else
+            {
+                currentAgent->changeBehaviour(new CourtshipBehaviour());
+            }
+
+            currentAgent->act(cpy_matrix, _data);
+            num_of_realized_actions++;
+
+        } while (num_of_realized_actions < NUMBER_OF_ACTIONS);
+	}
+    
+    _data.ageingPopulation();
+    std::cout << "Number of Agent : " << _data.getAgents().size() << std::endl;
+	_presentation.updateMatrixDisplay(
+        _data.getMatrix(), _data.getWidth(), _data.getHeight());
+    
+    for (int i = 0; i < _data.getWidth(); ++i)
+    {
+        delete [] cpy_matrix[i];
+    }
+    
+    delete [] cpy_matrix;
+}
+

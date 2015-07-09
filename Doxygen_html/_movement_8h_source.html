@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>AlienVsPredator:  Fichier source de Source/Behaviour/Movement.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AlienVsPredator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_e549c9ddd24b4eedf293941bf66ef5d7.html">Behaviour</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Movement.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_movement_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef __MOVEMENT_H__</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __MOVEMENT_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;boost/signals2.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../Entity/Alien.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_movement.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_movement.html">Movement</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//Typedef</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_movement.html#a713315574d59b0bd5e92bb6ef6be5dc6">   24</a></span>&#160;    <span class="keyword">typedef</span> boost::signals2::signal&lt;bool (Agent *, int, int)&gt; <a class="code" href="class_movement.html#a713315574d59b0bd5e92bb6ef6be5dc6">MoveSignal</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">//Constructor</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_movement.html#ae0493997549e8b3ead5146bea074010d">   27</a></span>&#160;    <a class="code" href="class_movement.html#ae0493997549e8b3ead5146bea074010d">Movement</a>(){};   </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//Destructor</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_movement.html#ab62140422526d18ae3596930d04d05ce">   30</a></span>&#160;    <a class="code" href="class_movement.html#ab62140422526d18ae3596930d04d05ce">~Movement</a>(){};  </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//Methods</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_movement.html#a4394c76d650e82d408b340f0708cf8e2">move</a>(<a class="code" href="class_agent.html">Agent</a> *, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_movement.html#a4394c76d650e82d408b340f0708cf8e2">move</a>(<a class="code" href="class_agent.html">Agent</a> *, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_movement.html#a14b55669ecc2e4eaffdfc4ba7779606a">addMoveSignal</a>(<span class="keyword">const</span> MoveSignal::slot_type&amp; slot) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//Enumeration</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79aa15f17bde29a29619c7df41dce7332ca">   38</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79">move_t</a> { <a class="code" href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79aa15f17bde29a29619c7df41dce7332ca">UP</a>, <a class="code" href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79a12b93a0cddc2fb2f13c60dfb6d4641ce">RIGHT</a>, <a class="code" href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79a01c4c9190341c0756b256ab53983c042">DOWN</a>, <a class="code" href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79ad303e75c938a784afc4657e44c3b1359">LEFT</a>, <a class="code" href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79ad4e3492a45560aa5d13115eae44eb67c">NOWHERE</a> }; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//Constante</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_movement.html#a699414342593a05019476e3cdc80a321">   41</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_movement.html#a699414342593a05019476e3cdc80a321">NUM_OF_DIRECTIONS</a> = 4; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//Signal</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_movement.html#ad386b1ea9681a410048cb9fd46936b5a">   45</a></span>&#160;    <span class="keyword">mutable</span> <a class="code" href="class_movement.html#a713315574d59b0bd5e92bb6ef6be5dc6">MoveSignal</a> <a class="code" href="class_movement.html#ad386b1ea9681a410048cb9fd46936b5a">_moveSig</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*__MOVEMENT_H__*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_movement_html_a14b55669ecc2e4eaffdfc4ba7779606a"><div class="ttname"><a href="class_movement.html#a14b55669ecc2e4eaffdfc4ba7779606a">Movement::addMoveSignal</a></div><div class="ttdeci">void addMoveSignal(const MoveSignal::slot_type &amp;slot) const </div><div class="ttdef"><b>Definition:</b> Movement.cpp:78</div></div>
+<div class="ttc" id="class_movement_html"><div class="ttname"><a href="class_movement.html">Movement</a></div><div class="ttdef"><b>Definition:</b> Movement.h:20</div></div>
+<div class="ttc" id="class_movement_html_a6605d9d2fdd83d32abf8269a99632d79"><div class="ttname"><a href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79">Movement::move_t</a></div><div class="ttdeci">move_t</div><div class="ttdef"><b>Definition:</b> Movement.h:38</div></div>
+<div class="ttc" id="class_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdef"><b>Definition:</b> Agent.hpp:21</div></div>
+<div class="ttc" id="class_movement_html_a699414342593a05019476e3cdc80a321"><div class="ttname"><a href="class_movement.html#a699414342593a05019476e3cdc80a321">Movement::NUM_OF_DIRECTIONS</a></div><div class="ttdeci">static const int NUM_OF_DIRECTIONS</div><div class="ttdef"><b>Definition:</b> Movement.h:41</div></div>
+<div class="ttc" id="class_movement_html_ad386b1ea9681a410048cb9fd46936b5a"><div class="ttname"><a href="class_movement.html#ad386b1ea9681a410048cb9fd46936b5a">Movement::_moveSig</a></div><div class="ttdeci">MoveSignal _moveSig</div><div class="ttdef"><b>Definition:</b> Movement.h:45</div></div>
+<div class="ttc" id="class_movement_html_a6605d9d2fdd83d32abf8269a99632d79ad303e75c938a784afc4657e44c3b1359"><div class="ttname"><a href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79ad303e75c938a784afc4657e44c3b1359">Movement::LEFT</a></div><div class="ttdef"><b>Definition:</b> Movement.h:38</div></div>
+<div class="ttc" id="class_movement_html_a6605d9d2fdd83d32abf8269a99632d79a01c4c9190341c0756b256ab53983c042"><div class="ttname"><a href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79a01c4c9190341c0756b256ab53983c042">Movement::DOWN</a></div><div class="ttdef"><b>Definition:</b> Movement.h:38</div></div>
+<div class="ttc" id="class_movement_html_a4394c76d650e82d408b340f0708cf8e2"><div class="ttname"><a href="class_movement.html#a4394c76d650e82d408b340f0708cf8e2">Movement::move</a></div><div class="ttdeci">bool move(Agent *, int, int, int)</div><div class="ttdef"><b>Definition:</b> Movement.cpp:17</div></div>
+<div class="ttc" id="class_movement_html_a6605d9d2fdd83d32abf8269a99632d79ad4e3492a45560aa5d13115eae44eb67c"><div class="ttname"><a href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79ad4e3492a45560aa5d13115eae44eb67c">Movement::NOWHERE</a></div><div class="ttdef"><b>Definition:</b> Movement.h:38</div></div>
+<div class="ttc" id="class_movement_html_a713315574d59b0bd5e92bb6ef6be5dc6"><div class="ttname"><a href="class_movement.html#a713315574d59b0bd5e92bb6ef6be5dc6">Movement::MoveSignal</a></div><div class="ttdeci">boost::signals2::signal&lt; bool(Agent *, int, int)&gt; MoveSignal</div><div class="ttdef"><b>Definition:</b> Movement.h:24</div></div>
+<div class="ttc" id="class_movement_html_ab62140422526d18ae3596930d04d05ce"><div class="ttname"><a href="class_movement.html#ab62140422526d18ae3596930d04d05ce">Movement::~Movement</a></div><div class="ttdeci">~Movement()</div><div class="ttdef"><b>Definition:</b> Movement.h:30</div></div>
+<div class="ttc" id="class_movement_html_a6605d9d2fdd83d32abf8269a99632d79a12b93a0cddc2fb2f13c60dfb6d4641ce"><div class="ttname"><a href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79a12b93a0cddc2fb2f13c60dfb6d4641ce">Movement::RIGHT</a></div><div class="ttdef"><b>Definition:</b> Movement.h:38</div></div>
+<div class="ttc" id="class_movement_html_ae0493997549e8b3ead5146bea074010d"><div class="ttname"><a href="class_movement.html#ae0493997549e8b3ead5146bea074010d">Movement::Movement</a></div><div class="ttdeci">Movement()</div><div class="ttdef"><b>Definition:</b> Movement.h:27</div></div>
+<div class="ttc" id="class_movement_html_a6605d9d2fdd83d32abf8269a99632d79aa15f17bde29a29619c7df41dce7332ca"><div class="ttname"><a href="class_movement.html#a6605d9d2fdd83d32abf8269a99632d79aa15f17bde29a29619c7df41dce7332ca">Movement::UP</a></div><div class="ttdef"><b>Definition:</b> Movement.h:38</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 26 Mars 2014 18:26:11 pour AlienVsPredator par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,21 @@
+/**
+ * Main programm
+ * @file main.cpp
+ * @author Valentin Laurent & Valentin Elvassore
+ * @date <#11 septembre 2007#>
+ */
+
+#include <iostream>
+#include "Logic/GameController.hpp"
+
+
+int main (int argc, char * const argv[]) {
+	GameController gc = GameController::getInstance(5, 5);
+
+	for (int i = 0 ; i < 10 ; ++i)
+	{
+		gc.progress();
+	}
+
+    return 0;
+}

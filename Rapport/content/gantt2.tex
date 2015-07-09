@@ -1,0 +1,49 @@
+\begin{figure}[h!]
+    \centering    
+    \begin{ganttchart}%
+    	[vgrid={draw=none, dotted}, hgrid, 
+        %title label anchor/.style={below=-1.6ex},
+        %title left shift=.05,
+        %title right shift=-.05,
+        %title height=1,
+        %bar/.style={fill=gray!50},
+        %incomplete/.style={fill=white},
+        %progress label text={},
+        bar top shift=0.15,
+        bar height=0.7,
+        bar/.style={rounded corners=3pt, draw=none},
+        %group right shift=0,
+        %group top shift=.6,
+        %group height=.3,
+        group peaks={0}{}{.2},
+        %link/.style={thick, ->, green!50!black, rounded corners=2mm},
+        %link label anchor/.style=below,
+        %link mid=.7, link bulge=.6
+        ]{30}
+
+        \gantttitle{2013}{12}
+        \gantttitle{2014}{18}\\
+        \gantttitle{Novembre}{6} 
+        \gantttitle{Décembre}{6}
+        \gantttitle{Janvier}{6}
+        \gantttitle{Février}{6}
+        \gantttitle{Mars}{6}\\
+
+        \ganttbar[inline,
+        	bar/.style={fill=Orchid, rounded corners=4pt, draw=none}]
+        	{\scriptsize{Révision du python}}{2}{12}\\
+      	\ganttbar[inline,
+      		bar/.style={fill=Lavender, rounded corners=4pt, draw=none}]
+      		{\scriptsize{Compréhension de NOMAD}}{2}{14} \\
+        \ganttbar[inline,
+            bar/.style={fill=TealBlue, rounded corners=4pt, draw=none}]
+            {\scriptsize{Parseur XML}}{19}{22} \\
+        \ganttbar[inline,
+            bar/.style={fill=SeaGreen, rounded corners=4pt, draw=none}]
+            {\scriptsize{Exécution de NOMAD}}{22}{25} \\
+    	\ganttbar[inline,
+    		bar/.style={fill=Apricot, rounded corners=4pt, draw=none}]
+    		{\scriptsize{Rédaction du rapport}}{25}{29}
+    \end{ganttchart}
+    \caption{Diagramme réel de Gantt.}
+\end{figure}

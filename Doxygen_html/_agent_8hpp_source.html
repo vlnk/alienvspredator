@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>AlienVsPredator:  Fichier source de Source/Entity/Agent.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AlienVsPredator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_b7e01f172cd97e63a5ab85b61d388554.html">Entity</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Agent.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_agent_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef AGENT_HPP</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AGENT_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coordinate_8h.html">coordinate.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="class_i_behaviour.html">IBehaviour</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="class_data_storage.html">DataStorage</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_agent.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_agent.html">Agent</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_agent.html#aa3c79dac6aa16ae801ea8c2f3f7fea30">   24</a></span>&#160;    <a class="code" href="structcoordinate__t.html">coordinate_t</a> <a class="code" href="class_agent.html#aa3c79dac6aa16ae801ea8c2f3f7fea30">_coordinate</a>;   </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_agent.html#a5e417321c4a1a19e0d215534af259ea8">   27</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_agent.html#a5e417321c4a1a19e0d215534af259ea8">_lifespan</a>;              </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_agent.html#af3739ee32231d0d2307df9554779cbf1">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_agent.html#af3739ee32231d0d2307df9554779cbf1">_age</a>;                   </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_agent.html#ab0d4a81a73da1938fe1577e5b2acc17a">   29</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_agent.html#ab0d4a81a73da1938fe1577e5b2acc17a">_field_of_vision</a>;         </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_agent.html#a345d09586f3b7a2abaf43ed623f560bb">   30</a></span>&#160;    <a class="code" href="class_i_behaviour.html">IBehaviour</a> * <a class="code" href="class_agent.html#a345d09586f3b7a2abaf43ed623f560bb">_behaviour</a>;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//Constructor</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_agent.html#a78400fc8cd53102dd613ee8c20529724">Agent</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//Destructor</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_agent.html#a1c674da923ec491ebd6cb9bc5cdf30d0">~Agent</a>() = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//Accessors</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_agent.html#a2bb73aaadc5f056d600ae126e9270398">   40</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="structcoordinate__t.html">coordinate_t</a>&amp; <a class="code" href="class_agent.html#a2bb73aaadc5f056d600ae126e9270398">getCoordinate</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_agent.html#aa3c79dac6aa16ae801ea8c2f3f7fea30">_coordinate</a>;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_agent.html#aa55b3f445d5ccafa01b3284e0ecd1ba3">setCoordinate</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_agent.html#ae08acaf5a96674c6512badccfa938178">   42</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="class_agent.html#ae08acaf5a96674c6512badccfa938178">getLifespan</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_agent.html#a5e417321c4a1a19e0d215534af259ea8">_lifespan</a>;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_agent.html#a061127a1f6d47637eb7dbb787d95d42b">setLifespan</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> lifespan);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="class_agent.html#a0cfcac791305a7e947d3a174f9750265">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_agent.html#a7bd548db011ab7870fb2b32c5042d641">   45</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="class_agent.html#a7bd548db011ab7870fb2b32c5042d641">getAge</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_agent.html#af3739ee32231d0d2307df9554779cbf1">_age</a>;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_agent.html#a3a952aaa90f84f8029e7002db8f7d64e">   46</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="class_agent.html#a3a952aaa90f84f8029e7002db8f7d64e">getFieldOfVision</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_agent.html#ab0d4a81a73da1938fe1577e5b2acc17a">_field_of_vision</a>;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_agent.html#a1ce23f01e2b3eb34435cee34c6a8a764">   47</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_i_behaviour.html">IBehaviour</a> * <a class="code" href="class_agent.html#a1ce23f01e2b3eb34435cee34c6a8a764">getBehaviour</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_agent.html#a345d09586f3b7a2abaf43ed623f560bb">_behaviour</a>;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">//Methods</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_agent.html#a22bc145e8fd03bbc8d079855a98d94b2">attack</a>(<a class="code" href="class_agent.html">Agent</a> *) = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_agent.html">Agent</a>* <a class="code" href="class_agent.html#a28f8d0046b8f193aa6e3b13d7b41cda0">giveBirth</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>,<span class="keyword">const</span> <span class="keywordtype">int</span>) = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_agent.html#adf72c6bff50b31083f8f0629db8fc9d6">isSameType</a>(<a class="code" href="class_agent.html">Agent</a>*) = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_agent.html#a5f7a2072f3d27530cbfb5ad9f450dc22">addAge</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_agent.html#ac1e617b71a4bb0bcee48bd57b35673e8">isPrey</a>(<a class="code" href="class_agent.html">Agent</a>*) = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_agent.html#a39d3668d7aca9e45578963d077ff271d">isFeared</a>(<a class="code" href="class_agent.html">Agent</a>*) = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_agent.html#a1b35eab80e89fc68d39e65eab8a0f866">act</a>(<a class="code" href="class_agent.html">Agent</a>***, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_agent.html#a4d6ff6e891390df2d0865693b64df145">changeBehaviour</a>(<a class="code" href="class_i_behaviour.html">IBehaviour</a> *);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">//Constante</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_agent.html#a1df0a83741b40e8b298256f128ea49f6">   61</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_agent.html#a1df0a83741b40e8b298256f128ea49f6">SEXUAL_MAJORITY</a> = 15;  </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_agent.html#ab558e3cac3d689dc0eee5ddb4c2fc1f2">   62</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_agent.html#ab558e3cac3d689dc0eee5ddb4c2fc1f2">AVERAGE_LIFETIME</a> = 30; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;std::ostream&amp; <a class="code" href="_agent_8hpp.html#a46eb4c42badb60920b9332afba543c1a">operator&lt;&lt;</a>(std::ostream &amp;, <a class="code" href="class_agent.html">Agent</a> <span class="keyword">const</span>&amp;);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_agent_html_a22bc145e8fd03bbc8d079855a98d94b2"><div class="ttname"><a href="class_agent.html#a22bc145e8fd03bbc8d079855a98d94b2">Agent::attack</a></div><div class="ttdeci">virtual void attack(Agent *)=0</div></div>
+<div class="ttc" id="class_agent_html_aa55b3f445d5ccafa01b3284e0ecd1ba3"><div class="ttname"><a href="class_agent.html#aa55b3f445d5ccafa01b3284e0ecd1ba3">Agent::setCoordinate</a></div><div class="ttdeci">void setCoordinate(int, int)</div><div class="ttdef"><b>Definition:</b> Agent.cpp:45</div></div>
+<div class="ttc" id="class_i_behaviour_html"><div class="ttname"><a href="class_i_behaviour.html">IBehaviour</a></div><div class="ttdef"><b>Definition:</b> IBehaviour.h:21</div></div>
+<div class="ttc" id="class_agent_html_a39d3668d7aca9e45578963d077ff271d"><div class="ttname"><a href="class_agent.html#a39d3668d7aca9e45578963d077ff271d">Agent::isFeared</a></div><div class="ttdeci">virtual bool isFeared(Agent *)=0</div></div>
+<div class="ttc" id="class_agent_html_ab558e3cac3d689dc0eee5ddb4c2fc1f2"><div class="ttname"><a href="class_agent.html#ab558e3cac3d689dc0eee5ddb4c2fc1f2">Agent::AVERAGE_LIFETIME</a></div><div class="ttdeci">static const int AVERAGE_LIFETIME</div><div class="ttdef"><b>Definition:</b> Agent.hpp:62</div></div>
+<div class="ttc" id="class_agent_html_ab0d4a81a73da1938fe1577e5b2acc17a"><div class="ttname"><a href="class_agent.html#ab0d4a81a73da1938fe1577e5b2acc17a">Agent::_field_of_vision</a></div><div class="ttdeci">int _field_of_vision</div><div class="ttdef"><b>Definition:</b> Agent.hpp:29</div></div>
+<div class="ttc" id="class_data_storage_html"><div class="ttname"><a href="class_data_storage.html">DataStorage</a></div><div class="ttdef"><b>Definition:</b> DataStorage.hpp:28</div></div>
+<div class="ttc" id="class_agent_html_a1ce23f01e2b3eb34435cee34c6a8a764"><div class="ttname"><a href="class_agent.html#a1ce23f01e2b3eb34435cee34c6a8a764">Agent::getBehaviour</a></div><div class="ttdeci">const IBehaviour * getBehaviour() const </div><div class="ttdef"><b>Definition:</b> Agent.hpp:47</div></div>
+<div class="ttc" id="class_agent_html_adf72c6bff50b31083f8f0629db8fc9d6"><div class="ttname"><a href="class_agent.html#adf72c6bff50b31083f8f0629db8fc9d6">Agent::isSameType</a></div><div class="ttdeci">virtual bool isSameType(Agent *)=0</div></div>
+<div class="ttc" id="class_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdef"><b>Definition:</b> Agent.hpp:21</div></div>
+<div class="ttc" id="class_agent_html_a061127a1f6d47637eb7dbb787d95d42b"><div class="ttname"><a href="class_agent.html#a061127a1f6d47637eb7dbb787d95d42b">Agent::setLifespan</a></div><div class="ttdeci">void setLifespan(const int lifespan)</div><div class="ttdef"><b>Definition:</b> Agent.cpp:75</div></div>
+<div class="ttc" id="class_agent_html_af3739ee32231d0d2307df9554779cbf1"><div class="ttname"><a href="class_agent.html#af3739ee32231d0d2307df9554779cbf1">Agent::_age</a></div><div class="ttdeci">int _age</div><div class="ttdef"><b>Definition:</b> Agent.hpp:28</div></div>
+<div class="ttc" id="class_agent_html_a1c674da923ec491ebd6cb9bc5cdf30d0"><div class="ttname"><a href="class_agent.html#a1c674da923ec491ebd6cb9bc5cdf30d0">Agent::~Agent</a></div><div class="ttdeci">virtual ~Agent()=0</div><div class="ttdef"><b>Definition:</b> Agent.cpp:35</div></div>
+<div class="ttc" id="class_agent_html_a1b35eab80e89fc68d39e65eab8a0f866"><div class="ttname"><a href="class_agent.html#a1b35eab80e89fc68d39e65eab8a0f866">Agent::act</a></div><div class="ttdeci">bool act(Agent ***, int, int)</div><div class="ttdef"><b>Definition:</b> Agent.cpp:106</div></div>
+<div class="ttc" id="class_agent_html_a2bb73aaadc5f056d600ae126e9270398"><div class="ttname"><a href="class_agent.html#a2bb73aaadc5f056d600ae126e9270398">Agent::getCoordinate</a></div><div class="ttdeci">const coordinate_t &amp; getCoordinate() const </div><div class="ttdef"><b>Definition:</b> Agent.hpp:40</div></div>
+<div class="ttc" id="_agent_8hpp_html_a46eb4c42badb60920b9332afba543c1a"><div class="ttname"><a href="_agent_8hpp.html#a46eb4c42badb60920b9332afba543c1a">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;, Agent const &amp;)</div><div class="ttdef"><b>Definition:</b> Agent.cpp:66</div></div>
+<div class="ttc" id="class_agent_html_ae08acaf5a96674c6512badccfa938178"><div class="ttname"><a href="class_agent.html#ae08acaf5a96674c6512badccfa938178">Agent::getLifespan</a></div><div class="ttdeci">const int &amp; getLifespan() const </div><div class="ttdef"><b>Definition:</b> Agent.hpp:42</div></div>
+<div class="ttc" id="class_agent_html_a345d09586f3b7a2abaf43ed623f560bb"><div class="ttname"><a href="class_agent.html#a345d09586f3b7a2abaf43ed623f560bb">Agent::_behaviour</a></div><div class="ttdeci">IBehaviour * _behaviour</div><div class="ttdef"><b>Definition:</b> Agent.hpp:30</div></div>
+<div class="ttc" id="class_agent_html_aa3c79dac6aa16ae801ea8c2f3f7fea30"><div class="ttname"><a href="class_agent.html#aa3c79dac6aa16ae801ea8c2f3f7fea30">Agent::_coordinate</a></div><div class="ttdeci">coordinate_t _coordinate</div><div class="ttdef"><b>Definition:</b> Agent.hpp:24</div></div>
+<div class="ttc" id="class_agent_html_ac1e617b71a4bb0bcee48bd57b35673e8"><div class="ttname"><a href="class_agent.html#ac1e617b71a4bb0bcee48bd57b35673e8">Agent::isPrey</a></div><div class="ttdeci">virtual bool isPrey(Agent *)=0</div></div>
+<div class="ttc" id="class_agent_html_a78400fc8cd53102dd613ee8c20529724"><div class="ttname"><a href="class_agent.html#a78400fc8cd53102dd613ee8c20529724">Agent::Agent</a></div><div class="ttdeci">Agent(int, int, int, int, int)</div><div class="ttdef"><b>Definition:</b> Agent.cpp:21</div></div>
+<div class="ttc" id="class_agent_html_a5e417321c4a1a19e0d215534af259ea8"><div class="ttname"><a href="class_agent.html#a5e417321c4a1a19e0d215534af259ea8">Agent::_lifespan</a></div><div class="ttdeci">int _lifespan</div><div class="ttdef"><b>Definition:</b> Agent.hpp:27</div></div>
+<div class="ttc" id="class_agent_html_a7bd548db011ab7870fb2b32c5042d641"><div class="ttname"><a href="class_agent.html#a7bd548db011ab7870fb2b32c5042d641">Agent::getAge</a></div><div class="ttdeci">const int &amp; getAge() const </div><div class="ttdef"><b>Definition:</b> Agent.hpp:45</div></div>
+<div class="ttc" id="structcoordinate__t_html"><div class="ttname"><a href="structcoordinate__t.html">coordinate_t</a></div><div class="ttdef"><b>Definition:</b> coordinate.h:11</div></div>
+<div class="ttc" id="class_agent_html_a0cfcac791305a7e947d3a174f9750265"><div class="ttname"><a href="class_agent.html#a0cfcac791305a7e947d3a174f9750265">Agent::toString</a></div><div class="ttdeci">virtual std::string toString() const </div><div class="ttdef"><b>Definition:</b> Agent.cpp:55</div></div>
+<div class="ttc" id="class_agent_html_a28f8d0046b8f193aa6e3b13d7b41cda0"><div class="ttname"><a href="class_agent.html#a28f8d0046b8f193aa6e3b13d7b41cda0">Agent::giveBirth</a></div><div class="ttdeci">virtual Agent * giveBirth(const int, const int)=0</div></div>
+<div class="ttc" id="class_agent_html_a3a952aaa90f84f8029e7002db8f7d64e"><div class="ttname"><a href="class_agent.html#a3a952aaa90f84f8029e7002db8f7d64e">Agent::getFieldOfVision</a></div><div class="ttdeci">const int &amp; getFieldOfVision() const </div><div class="ttdef"><b>Definition:</b> Agent.hpp:46</div></div>
+<div class="ttc" id="coordinate_8h_html"><div class="ttname"><a href="coordinate_8h.html">coordinate.h</a></div></div>
+<div class="ttc" id="class_agent_html_a5f7a2072f3d27530cbfb5ad9f450dc22"><div class="ttname"><a href="class_agent.html#a5f7a2072f3d27530cbfb5ad9f450dc22">Agent::addAge</a></div><div class="ttdeci">void addAge()</div><div class="ttdef"><b>Definition:</b> Agent.cpp:83</div></div>
+<div class="ttc" id="class_agent_html_a4d6ff6e891390df2d0865693b64df145"><div class="ttname"><a href="class_agent.html#a4d6ff6e891390df2d0865693b64df145">Agent::changeBehaviour</a></div><div class="ttdeci">void changeBehaviour(IBehaviour *)</div><div class="ttdef"><b>Definition:</b> Agent.cpp:88</div></div>
+<div class="ttc" id="class_agent_html_a1df0a83741b40e8b298256f128ea49f6"><div class="ttname"><a href="class_agent.html#a1df0a83741b40e8b298256f128ea49f6">Agent::SEXUAL_MAJORITY</a></div><div class="ttdeci">static const int SEXUAL_MAJORITY</div><div class="ttdef"><b>Definition:</b> Agent.hpp:61</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 26 Mars 2014 18:26:11 pour AlienVsPredator par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

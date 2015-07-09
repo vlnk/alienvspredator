@@ -1,0 +1,29 @@
+TALL_BUILD
+v6
+r1
+cCheck dependencies
+cPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh
+
+N/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh
+c000000005325D86100000000000000BE
+t1394989153
+s190
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesa053c8e10fd6b841^20d1c8e10fd6b841^---0#1#1#--18"Check dependencies36"4EF0427F-44E7-40B5-8F6A-E2C8514F53BE-
+
+CPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh
+s416681953.785368
+e416681953.965786
+r1
+xPhaseScriptExecution
+xCMake Rules
+x/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh
+oecho ""
+o
+oecho Build\ all\ projects
+oBuild all projects
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'116"PhaseScriptExecution CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh5da3c9e10fd6b841^3a3ff9e10fd6b841^-54"echo ""echo Build\ all\ projectsBuild all projects3(21%IDEActivityLogMessage2@8"echo ""-416681953#0#8#-0#-----2@26"echo Build\ all\ projects-416681953#9#26#-0#-----2@19"Build all projects-416681953#35#19#-0#-----0#0#1#--329"PhaseScriptExecution CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh    cd "/Users/val/Developer/C++ projects/alienvspredator"    /bin/sh -c \"/Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh\"36"EBE33B43-1742-4333-842D-A8F70586088D-
+bC0307463-F9A4-4ADA-8D8E-E900F11725BD
+

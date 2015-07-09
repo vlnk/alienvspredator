@@ -1,0 +1,38 @@
+/**
+ * Define the courtship behaviour of agents, when an agent whant to make love.
+ * @file CourtshipBehaviour.h
+ * @author Laurent Valentin
+ * @date 13/03/2014
+ */
+
+#ifndef __COURTSHIPBEHAVIOUR_HPP__
+#define __COURTSHIPBEHAVIOUR_HPP__
+
+#include <iostream>
+#include <boost/signals2.hpp>
+#include "IBehaviour.h"
+
+class CourtshipBehaviour : public IBehaviour
+{
+private:
+    int _distance;
+    
+public:
+    //Constructor
+    CourtshipBehaviour();
+    
+    //Destructor
+    ~CourtshipBehaviour(){};
+    
+    //Signal
+    boost::signals2::signal<void (Agent *, int, int)> loveSig;
+    
+    //Methods
+    bool love(Agent *, Agent ***, int, int, int);
+    Movement::move_t findLove(Agent*, Agent***, int, int);
+    void makeLove(Agent *, int, int);
+    bool act(Agent *, Agent ***, int, int);
+    
+};
+
+#endif /*__COURTSHIPBEHAVIOUR_HPP__*/

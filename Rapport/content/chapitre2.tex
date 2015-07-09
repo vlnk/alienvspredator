@@ -1,0 +1,28 @@
+\subsection{Présentation de la structure}
+Nous avons choisis d'utiliser une structure DataLayer/BuisinessLayer/PresentationLayer avec des Entities accessible par les trois classes afin de structurer au mieux notre programme. Ainsi les classes \verb$DataStorage$, \verb$GameControler$ et \verb$ConsolePresentation$ suivent ce schéma avec une disposition de la classe \verb$Agent$ pour toutes ces classes.
+
+\input{uml/simple}
+
+De plus, le comportement des Agents est défini via un patron stratégie qui sépare les comportements \verb$AggressiveBehaviour$, \verb$DefensiveBehaviour$ et \verb$CourtshipBehaviour$. Ces trois classes sont définies à partir de la classe abstraite \verb$IBehaviour$ que j'ai mis en place comme une interface.
+
+Avec plus de temps, je voulais mettre en place trois autres patrons stratégie pour chacun de ces comportements afin qu'ils soient spécifiques à chaque Agent et ainsi pouvoir implémenter facilement des règles plus subtiles pour chacun des Agents. Par exemple, un Alien ne se reproduit pas avec un autre Alien mais pond un parasite qui se développera dans sa victime, ou un Prédator est très mauvais au corps à corps et ne peut attaquer ces cibles qu'à distance.
+
+La classe \verb$Mouvement$ permet de simplifier la gestion des déplacements. Un mouvement est instancié à chaque attribution de comportement. Chaque Agent va se déplacer selon son comportement, si ce mouvement permet une action l'Agent va agir en conséquence.
+
+Les Agents n'ont pas une gestion à proprement dites "selon un patron stratégie", la classe abstraite Agent permet de définir toutes les méthodes et attributs communs à chaque Agent puis chaque Agent spécifique redéfinit ces méthodes selon ces caractéristiques propres.
+
+\subsection{Utilisation de la librairie Boost}
+Toute les classes de conportement \verb$Behaviour$ et la classe \verb$ouvement$ imposent un changement de la matrice originale en suivant les principes basés sur le jeu de la vie : toutes les actions qu'entreprennent chaque agent sont effectuées à partir de la copie de la matrice de jeu mais chaque action executée est répercuptée sur la matrice originale.
+
+Le soucis est que cette matrice originale est gérée uniquement par la classe \verb$DataStorage$. Cette dernière est instanciée dans le \verb$GameControler$ qui suit un patron singleton afin de préserver l'unicité de cette structure. Les classes de type \verb$Behaviour$ sont indépendantes de cette structure Data/Buisiness/Presentation et sont instanciées et détrutes de multiple fois pendant un tour. Par soucis de simplicité et de lisibilité du code et de la structure, je ne voulais pas donner la \verb$DataStorage$ en argument des classes \verb$Behaviour$ afin de gérer la matrice originale à chaque action.
+
+L'idée a été de créer des évènements : la \verb$DataStorage$ est abonnée aux évennements déclanchés par les \verb$Behaviour$s et la matrice est modifiée dès qu'un évennement est lancé et receptionné. Cette gestion des évènements s'est faites via les librairies Boost \verb$signal2$ et \verb$bind$. Les classes \verb$DataStorage$ et \verb$IBehaviour$ sont connectées dans le \verb$GameControler$ en précisant les méthodes.
+
+\input{listings/loveSig}
+
+Ainsi lorsque deux Agents se reproduisent un signal est lancé (\verb$loveSig$) et la methode \verb$DataStorage::giveBirth$ est lancée avec les arguments \verb$_1$, \verb$_2$ et \verb$_3$.
+
+Le signal est initialisé directement dans la classe de comportement \verb$CourtshipBehaviour$ et est lancé par la methode \verb$CourtshipBehaviour::act()$.
+
+\input{listings/CourtshipBehaviour}
+
