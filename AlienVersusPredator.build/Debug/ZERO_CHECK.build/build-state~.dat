@@ -1,29 +1,0 @@
-TZERO_CHECK
-v6
-r1
-cCheck dependencies
-cPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ZERO_CHECK.build/Script-6AA6AE8780F74B8CB1B525F4.sh
-
-N/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ZERO_CHECK.build/Script-6AA6AE8780F74B8CB1B525F4.sh
-c0000000053261D4500000000000000BF
-t1395006789
-s191
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies9df787c554d6b841^1b2a8ec554d6b841^---0#1#1#--18"Check dependencies36"5DC21150-EBF5-47AA-963E-C164380D7D7B-
-
-CPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ZERO_CHECK.build/Script-6AA6AE8780F74B8CB1B525F4.sh
-s416699589.560715
-e416699589.721216
-r1
-xPhaseScriptExecution
-xCMake Rules
-x/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ZERO_CHECK.build/Script-6AA6AE8780F74B8CB1B525F4.sh
-oecho ""
-o
-omake -f /Users/val/Developer/C++\ projects/alienvspredator/CMakeScripts/ReRunCMake.make
-omake[1]: `/Users/val/Developer/C++ projects/alienvspredator/CMakeFiles/cmake.check_cache' is up to date.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'117"PhaseScriptExecution CMake\ Rules AlienVersusPredator.build/Debug/ZERO_CHECK.build/Script-6AA6AE8780F74B8CB1B525F4.sh7f1491c554d6b841^f5f1b8c554d6b841^-202"echo ""make -f /Users/val/Developer/C++\ projects/alienvspredator/CMakeScripts/ReRunCMake.makemake[1]: `/Users/val/Developer/C++ projects/alienvspredator/CMakeFiles/cmake.check_cache' is up to date.3(21%IDEActivityLogMessage2@8"echo ""-416699589#0#8#-0#-----2@88"make -f /Users/val/Developer/C++\ projects/alienvspredator/CMakeScripts/ReRunCMake.make-416699589#9#88#-0#-----2@105"make[1]: `/Users/val/Developer/C++ projects/alienvspredator/CMakeFiles/cmake.check_cache' is up to date.-416699589#97#105#-0#-----0#0#1#--331"PhaseScriptExecution CMake\ Rules AlienVersusPredator.build/Debug/ZERO_CHECK.build/Script-6AA6AE8780F74B8CB1B525F4.sh    cd "/Users/val/Developer/C++ projects/alienvspredator"    /bin/sh -c \"/Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ZERO_CHECK.build/Script-6AA6AE8780F74B8CB1B525F4.sh\"36"2FDDF58D-7E5C-445B-92CD-94AE81F9921B-
-b9BD73A70-F5AD-4475-93A3-9CFC26504C6C
-

@@ -1,105 +1,0 @@
-TALL_BUILD
-v6
-r1
-cCheck dependencies
-cPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-FA7C4B41A22C4510AB9F656B.sh
-
-N/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-0CE43CC2CCBB46BBB756DF88.sh
-c000000005325D9D100000000000000BE
-t1394989521
-s190
-
-N/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-3B68823D26054CD2BE5FD268.sh
-c000000005325DB0F00000000000000BE
-t1394989839
-s190
-
-N/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-9470EE2A2E3A44B3A4995B37.sh
-c000000005325DB6400000000000000BE
-t1394989924
-s190
-
-N/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh
-c000000005325D86100000000000000BE
-t1394989153
-s190
-
-N/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-FA7C4B41A22C4510AB9F656B.sh
-c000000005325EDB800000000000000BE
-t1394994616
-s190
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesdfdc775425d6b841^c72f785425d6b841^---0#1#1#--18"Check dependencies36"82A213CF-E485-4DC9-8DB4-D3280BA4E09A-
-
-CPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-0CE43CC2CCBB46BBB756DF88.sh
-s416682603.981234
-e416682604.066699
-r1
-xPhaseScriptExecution
-xCMake Rules
-x/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-0CE43CC2CCBB46BBB756DF88.sh
-oecho ""
-o
-oecho Build\ all\ projects
-oBuild all projects
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'116"PhaseScriptExecution CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-0CE43CC2CCBB46BBB756DF88.shb5fdfb6b12d6b841^1f801c6c12d6b841^-54"echo ""echo Build\ all\ projectsBuild all projects3(21%IDEActivityLogMessage2@8"echo ""-416682604#0#8#-0#-----2@26"echo Build\ all\ projects-416682604#9#26#-0#-----2@19"Build all projects-416682604#35#19#-0#-----0#0#1#--329"PhaseScriptExecution CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-0CE43CC2CCBB46BBB756DF88.sh    cd "/Users/val/Developer/C++ projects/alienvspredator"    /bin/sh -c \"/Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-0CE43CC2CCBB46BBB756DF88.sh\"36"7957D55A-616A-45B2-909C-9BABBA698485-
-b939D52AF-CAC2-4B48-8A43-E587C56DDA93
-
-CPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-3B68823D26054CD2BE5FD268.sh
-s416682639.466720
-e416682639.808344
-r1
-xPhaseScriptExecution
-xCMake Rules
-x/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-3B68823D26054CD2BE5FD268.sh
-oecho ""
-o
-oecho Build\ all\ projects
-oBuild all projects
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'124"[1mPhaseScriptExecution[0m CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-3B68823D26054CD2BE5FD268.sha514788f12d6b841^56f1ce8f12d6b841^-54"echo ""echo Build\ all\ projectsBuild all projects3(21%IDEActivityLogMessage2@8"echo ""-416682639#0#8#-0#-----2@26"echo Build\ all\ projects-416682639#9#26#-0#-----2@19"Build all projects-416682639#35#19#-0#-----0#0#1#--337"[1mPhaseScriptExecution[0m CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-3B68823D26054CD2BE5FD268.sh    cd "/Users/val/Developer/C++ projects/alienvspredator"    /bin/sh -c \"/Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-3B68823D26054CD2BE5FD268.sh\"36"E7C8F9DA-A9EF-40C8-BD3A-C97BC1BCFF3A-
-bEF906D0B-D311-434B-ABDB-BE53B3A6E0B0
-
-CPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-9470EE2A2E3A44B3A4995B37.sh
-s416682724.796536
-e416682724.985280
-r1
-xPhaseScriptExecution
-xCMake Rules
-x/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-9470EE2A2E3A44B3A4995B37.sh
-oecho ""
-o
-oecho Build\ all\ projects
-oBuild all projects
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'124"[1mPhaseScriptExecution[0m CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-9470EE2A2E3A44B3A4995B37.shd97ccce412d6b841^e23cfce412d6b841^-54"echo ""echo Build\ all\ projectsBuild all projects3(21%IDEActivityLogMessage2@8"echo ""-416682724#0#8#-0#-----2@26"echo Build\ all\ projects-416682724#9#26#-0#-----2@19"Build all projects-416682724#35#19#-0#-----0#0#1#--337"[1mPhaseScriptExecution[0m CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-9470EE2A2E3A44B3A4995B37.sh    cd "/Users/val/Developer/C++ projects/alienvspredator"    /bin/sh -c \"/Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-9470EE2A2E3A44B3A4995B37.sh\"36"09AA1E81-D70F-4CD9-B490-1E51764198D5-
-bCC533AB8-D557-4D1F-8EDA-0BBC95AC1E58
-
-CPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh
-s416681953.785368
-e416681953.965786
-r1
-xPhaseScriptExecution
-xCMake Rules
-x/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh
-oecho ""
-o
-oecho Build\ all\ projects
-oBuild all projects
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'116"PhaseScriptExecution CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh5da3c9e10fd6b841^3a3ff9e10fd6b841^-54"echo ""echo Build\ all\ projectsBuild all projects3(21%IDEActivityLogMessage2@8"echo ""-416681953#0#8#-0#-----2@26"echo Build\ all\ projects-416681953#9#26#-0#-----2@19"Build all projects-416681953#35#19#-0#-----0#0#1#--329"PhaseScriptExecution CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh    cd "/Users/val/Developer/C++ projects/alienvspredator"    /bin/sh -c \"/Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-C9B33F897A7E42598F510FC3.sh\"36"EBE33B43-1742-4333-842D-A8F70586088D-
-bC0307463-F9A4-4ADA-8D8E-E900F11725BD
-
-CPhaseScriptExecution CMake\ Rules /Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-FA7C4B41A22C4510AB9F656B.sh
-s416687444.470988
-e416687444.511688
-r1
-xPhaseScriptExecution
-xCMake Rules
-x/Users/val/Developer/C++ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-FA7C4B41A22C4510AB9F656B.sh
-oecho ""
-o
-oecho Build\ all\ projects
-oBuild all projects
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'124"[1mPhaseScriptExecution[0m CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-FA7C4B41A22C4510AB9F656B.shae28795425d6b841^dbfd825425d6b841^-54"echo ""echo Build\ all\ projectsBuild all projects3(21%IDEActivityLogMessage2@8"echo ""-416687444#0#8#-0#-----2@26"echo Build\ all\ projects-416687444#9#26#-0#-----2@19"Build all projects-416687444#35#19#-0#-----0#0#1#--337"[1mPhaseScriptExecution[0m CMake\ Rules AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-FA7C4B41A22C4510AB9F656B.sh    cd "/Users/val/Developer/C++ projects/alienvspredator"    /bin/sh -c \"/Users/val/Developer/C++\ projects/alienvspredator/AlienVersusPredator.build/Debug/ALL_BUILD.build/Script-FA7C4B41A22C4510AB9F656B.sh\"36"0643E9E3-2642-47DB-BB59-286E4C819195-
-b4163C198-4BF7-440A-AE06-93C2C6C253C9
-
